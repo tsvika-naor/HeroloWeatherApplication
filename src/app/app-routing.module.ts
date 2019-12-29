@@ -1,11 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {FavoritesComponent} from './favorites/favorites.component';
+import {WeatherComponent} from './weather/weather.component';
+// import {MatComponent} from './shared/mat.component';
 
-
-const routes: Routes = [];
-
+const appRoutes: Routes = [
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
+  {path: 'home', component: WeatherComponent},
+  {path: 'favorites', component: FavoritesComponent},
+  // {path: 'mat', component: MatComponent}
+]
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
