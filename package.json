@@ -30,7 +30,8 @@
     "font-awesome-icons": "^1.6.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "engine": { "node": "10.16.0", "npm": "6.13.4" }
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.21",
