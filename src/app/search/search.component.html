@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4">
+    </div>
+    <div class="col-xs-4">
+      <div class="form-group">
+        <label for="query"></label>
+        <input type="text" (keyup)="onKeypress($event)" class="form-control" id="query" placeholder="search city..."
+               style="margin-bottom: 5px" #searchBox>
+
+
+          <select class='form-control' [(ngModel)]="selectedOption"
+                  placeholder="Search" style="cursor: pointer" (change)="onSeletct($event.target)" >
+            <option *ngFor="let item of weatherItem" [ngValue]="(item)">{{item.LocalizedName}}</option>
+          </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-xs-4">
+  </div>
+</div>
+
+
+
+
