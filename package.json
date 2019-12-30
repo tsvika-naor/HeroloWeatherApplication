@@ -30,6 +30,7 @@
     "bootstrap": "^3.4.1",
     "font-awesome": "^4.7.0",
     "font-awesome-icons": "^1.6.0",
+    "pg": "^7.17.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
