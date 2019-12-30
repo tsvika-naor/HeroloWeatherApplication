@@ -25,11 +25,7 @@ import {MatChipsModule} from '@angular/material';
 import {DropdownDirective} from './shared/dropdown.directive';
 import {StoreModule} from '@ngrx/store';
 import {reducer} from './weather/store/weather.reducer';
-import {ADD_CITY} from './weather/store/weather.actions';
-import {reduce} from 'rxjs/operators';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
-
-// import {MatComponent} from './shared/mat.component';
 
 @NgModule({
   declarations: [
