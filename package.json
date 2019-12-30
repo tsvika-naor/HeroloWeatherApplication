@@ -4,10 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "node index.js",
-    "build": "webpack",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "heroku-postbuild": "ng build --prod"
   },
   "private": true,
   "dependencies": {
@@ -28,10 +29,6 @@
     "@ngrx/store": "^8.6.0",
     "angular-font-awesome": "^3.1.2",
     "bootstrap": "^3.4.1",
-    "engine": {
-      "node": "12.14.0",
-      "npm": "6.13.4"
-    },
     "font-awesome": "^4.7.0",
     "font-awesome-icons": "^1.6.0",
     "rxjs": "~6.4.0",
