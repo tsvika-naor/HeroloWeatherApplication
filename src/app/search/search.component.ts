@@ -15,7 +15,7 @@ export class SearchComponent implements OnInit {
   selectedOption: any;
 
 
-  constructor(private weatherService: WeatherService, private router: Router) {
+  constructor(private weatherService: WeatherService) {
   }
 
   ngOnInit() {
@@ -32,11 +32,13 @@ export class SearchComponent implements OnInit {
   onKeypress(event: any) {
     this.query = event.target.value;
     this.weatherService.autoComplete(this.query).subscribe(data => {
+      this.selectedOption = data[0];
+      this.onSeletct(null);
       this.weatherItem = data;
     });
   }
 
-  onSeletct(event) {
+  onSeletct() {
     this.key = this.selectedOption.Key;
     this.weatherService.cityName = this.selectedOption.LocalizedName;
     this.weatherService.getCurrentWeather(this.key).subscribe(res => {
