@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {WeatherService} from '../weather.service';
 import {Observable} from 'rxjs';
-import { WeatherItem} from './weather-item.interface';
+import {WeatherItem} from './weather-item.interface';
 import {Store} from '@ngrx/store';
 import {AppState} from '../../app.state';
 import * as WeatherActions from '../store/weather.actions';
@@ -21,8 +21,11 @@ export class WeatherItemComponent implements OnInit {
   }
 
   isFehrenhite = true;
-  private F = '℉';
-  private C = '℃';
+  F = '℉';
+  C = '℃';
+  cityName: string;
+  temperature: number;
+  weatherCondition: string;
 
   ngOnInit() {
   }
@@ -30,15 +33,20 @@ export class WeatherItemComponent implements OnInit {
   swapTempUnits() {
     this.isFehrenhite = !this.isFehrenhite;
   }
+
   getName() {
     console.log('blabla');
     console.log(this.weatherService.cityName);
   }
+
   onSelect() {
+    this.cityName = this.weatherService.cityName;
+    this.temperature = this.weatherService.temperature;
+    this.weatherCondition = this.weatherService.weatherCondition;
     this.store.dispatch(new WeatherActions.AddCity({
-      cityName: this.weatherService.cityName,
-      temperature: this.weatherService.temperature,
-      weatherCondition: this.weatherService.weatherCondition
+      cityName: this.cityName,
+      temperature: this.temperature,
+      weatherCondition: this.weatherCondition
     }));
   }
 

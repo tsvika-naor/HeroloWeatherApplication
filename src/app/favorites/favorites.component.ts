@@ -15,8 +15,7 @@ export class FavoritesComponent implements OnInit {
   enableDelete = true;
   weather$: Observable<WeatherItem[]>;
   index;
-
-  private C = '℃';
+  C = '℃';
 
   constructor(private weatherService: WeatherService, private store: Store<AppState>) {
     this.weather$ = this.store.select('weatherItem');
