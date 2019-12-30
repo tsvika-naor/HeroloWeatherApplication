@@ -26,8 +26,18 @@ export class WeatherItemComponent implements OnInit {
   cityName: string;
   temperature: number;
   weatherCondition: string;
+  maxF: string[];
+  minF: string[];
+  maxC: string[];
+  minC: string[];
+  day: string[];
 
   ngOnInit() {
+    this.day = this.weatherService.day;
+    this.maxF = this.weatherService.maxTempInF;
+    this.minF = this.weatherService.minTempInF;
+    this.maxC = this.weatherService.maxTempInC;
+    this.minC = this.weatherService.minTempInC;
   }
 
   swapTempUnits() {

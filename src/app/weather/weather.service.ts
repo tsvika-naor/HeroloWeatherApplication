@@ -16,7 +16,7 @@ export class WeatherService implements OnInit {
   temperature = 0 ;
   weatherCondition = '';
   cityName = '';
-  private Key1 ='oNdnipNwzT4GJw8IJ1OnpJsQh1G0lgYG';
+  // private Key1 ='oNdnipNwzT4GJw8IJ1OnpJsQh1G0lgYG';
   private KEY = 'bKpCXKwVNJLAhn5ZZmuAeXzvfag844K6';
   private autocomplete = 'http://dataservice.accuweather.com/locations/v1/cities/autocomplete';
   private currentConditions = 'http://dataservice.accuweather.com/currentconditions/v1/';
