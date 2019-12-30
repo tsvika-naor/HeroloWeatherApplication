@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {WeatherService} from '../weather/weather.service';
-import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -22,7 +21,7 @@ export class SearchComponent implements OnInit {
     this.weatherService.autoComplete('tel-aviv').subscribe((res) => {
         this.weatherItem = res;
         this.selectedOption = res[0];
-        this.onSeletct(null);
+        this.onSeletct();
       },
       error1 => {
         throw new Error('your error is:' + error1);
@@ -33,7 +32,7 @@ export class SearchComponent implements OnInit {
     this.query = event.target.value;
     this.weatherService.autoComplete(this.query).subscribe(data => {
       this.selectedOption = data[0];
-      this.onSeletct(null);
+      this.onSeletct();
       this.weatherItem = data;
     });
   }
