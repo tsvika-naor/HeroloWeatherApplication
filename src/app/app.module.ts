@@ -36,7 +36,6 @@ import {AngularFontAwesomeModule} from 'angular-font-awesome';
     WeatherComponent,
     WeatherItemComponent,
     DropdownDirective,
-
   ],
   imports: [
     StoreModule.forRoot( { weatherItem : reducer }),
