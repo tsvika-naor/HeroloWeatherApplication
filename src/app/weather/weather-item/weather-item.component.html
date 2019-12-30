@@ -1,19 +1,19 @@
 <div *ngIf="isFehrenhite">
-  <button class="btn btn-primary" (click)="swapTempUnits()">°C</button>
+  <button class="btn btn-primary" (click)="swapTempUnits()">â„ƒ</button>
 </div>
 <div *ngIf="!isFehrenhite">
-  <button class="btn btn-success" (click)="swapTempUnits()">°F</button>
+  <button class="btn btn-success" (click)="swapTempUnits()">â„‰</button>
 </div>
 <button class="btn btn-primary" style="cursor: pointer" role="button" (click)="onSelect()">Add To Favorits
 </button>
 <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="-6%" fxLayoutAlign="left">
-  <div *ngFor="let day of this.weatherService.day ;let i = index" fxFlex="20%" fxFlexAlign="center">
+  <div *ngFor="let day of this.weatherService.day ;let index = index" fxFlex="20%" fxFlexAlign="center">
     <div *ngIf="isFehrenhite">
-      <mat-card class="child">
+      <mat-card class="child" >
         <mat-card-title>{{day}}</mat-card-title>
         <mat-card-subtitle>{{'Min'}} / {{'Max'}}  </mat-card-subtitle>
-        <mat-card-subtitle>{{this.weatherService.minTempInF[i]}}{{F}}/
-          {{this.weatherService.maxTempInF[i]}}{{F}}</mat-card-subtitle>
+        <mat-card-subtitle>{{this.weatherService.minTempInF[index]}}{{F}}/
+          {{this.weatherService.maxTempInF[index]}}{{F}}</mat-card-subtitle>
       </mat-card>
     </div>
     <div *ngIf="!isFehrenhite">

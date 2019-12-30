@@ -26,12 +26,17 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@ngrx/store": "^8.6.0",
+    "angular-font-awesome": "^3.1.2",
     "bootstrap": "^3.4.1",
+    "engine": {
+      "node": "10.16.0",
+      "npm": "6.13.4"
+    },
+    "font-awesome": "^4.7.0",
     "font-awesome-icons": "^1.6.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1",
-    "engine": { "node": "10.16.0", "npm": "6.13.4" }
+    "zone.js": "~0.9.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.21",

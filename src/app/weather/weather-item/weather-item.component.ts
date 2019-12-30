@@ -15,13 +15,14 @@ import * as WeatherActions from '../store/weather.actions';
 export class WeatherItemComponent implements OnInit {
   weather: Observable<WeatherItem[]>;
   weatherItem: WeatherItem;
+  checkForDuplicates;
 
   constructor(private weatherService: WeatherService, private store: Store<AppState>) {
   }
 
   isFehrenhite = true;
-  private F = '°F';
-  private C = '°C';
+  private F = 'â„‰';
+  private C = 'â„ƒ';
 
   ngOnInit() {
   }
@@ -29,7 +30,10 @@ export class WeatherItemComponent implements OnInit {
   swapTempUnits() {
     this.isFehrenhite = !this.isFehrenhite;
   }
-
+  getName() {
+    console.log('blabla');
+    console.log(this.weatherService.cityName);
+  }
   onSelect() {
     this.store.dispatch(new WeatherActions.AddCity({
       cityName: this.weatherService.cityName,

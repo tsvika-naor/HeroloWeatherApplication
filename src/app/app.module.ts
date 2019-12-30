@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import  {ReactiveFormsModule} from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -16,7 +16,7 @@ import {
   MatRadioModule,
   MatOptionModule,
   MatSelectModule,
-  MatCardModule, MatToolbarModule, MatGridListModule, MatDividerModule
+  MatCardModule, MatToolbarModule, MatGridListModule, MatDividerModule, MatIconModule
 } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { WeatherItemComponent } from './weather/weather-item/weather-item.component';
@@ -27,6 +27,7 @@ import {StoreModule} from '@ngrx/store';
 import {reducer} from './weather/store/weather.reducer';
 import {ADD_CITY} from './weather/store/weather.actions';
 import {reduce} from 'rxjs/operators';
+import {AngularFontAwesomeModule} from 'angular-font-awesome';
 
 // import {MatComponent} from './shared/mat.component';
 
@@ -44,6 +45,7 @@ import {reduce} from 'rxjs/operators';
   imports: [
     StoreModule.forRoot( { weatherItem : reducer }),
     FlexLayoutModule,
+    AngularFontAwesomeModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -60,6 +62,7 @@ import {reduce} from 'rxjs/operators';
     MatChipsModule,
     MatGridListModule,
     MatDividerModule,
+    MatIconModule
 
 
   ],

@@ -9,7 +9,7 @@ import {WeatherService} from '../weather/weather.service';
 export class HeaderComponent implements OnInit {
   color = true;
   constructor(weatherService: WeatherService) { }
-@Output() changeColor= new EventEmitter<boolean>()
+@Output() changeColor = new EventEmitter<boolean>()
   ngOnInit() {
   }
   onClick() {
