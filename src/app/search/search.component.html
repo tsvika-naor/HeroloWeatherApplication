@@ -11,7 +11,7 @@
 
           <select class='form-control' name="search"  [(ngModel)]="selectedOption"
                   style="cursor: pointer" (change)="onSeletct()">
-            <option label="item name" *ngFor="let item of weatherItem" [ngValue]="(item)">{{item.LocalizedName}}</option>
+            <option label="{{item.LocalizedName}}" *ngFor="let item of weatherItem" [ngValue]="(item)">{{item.LocalizedName}}</option>
           </select>
 
       </div>

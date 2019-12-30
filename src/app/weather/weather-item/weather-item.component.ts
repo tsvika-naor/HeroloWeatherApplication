@@ -44,11 +44,6 @@ export class WeatherItemComponent implements OnInit {
     this.isFehrenhite = !this.isFehrenhite;
   }
 
-  getName() {
-    console.log('blabla');
-    console.log(this.weatherService.cityName);
-  }
-
   onSelect() {
     this.cityName = this.weatherService.cityName;
     this.temperature = this.weatherService.temperature;
