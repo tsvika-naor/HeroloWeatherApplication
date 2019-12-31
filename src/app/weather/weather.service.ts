@@ -79,6 +79,9 @@ export class WeatherService implements OnInit {
     }
   }
 
+  ngOnInit(): void {
+  }
+
 }
 
 
