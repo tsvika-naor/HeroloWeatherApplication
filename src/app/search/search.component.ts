@@ -29,7 +29,7 @@ export class SearchComponent implements OnInit {
   }
 
   onKeypress(event: any) {
-    this.query = event.target.value;
+    this.query = JSON.parse(JSON.stringify(event.target.value));
     this.weatherService.autoComplete(this.query).subscribe(data => {
       this.selectedOption = data[0];
       this.onSeletct();
