@@ -1,8 +1,6 @@
 import {Injectable, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {WeatherItemComponent} from './weather-item/weather-item.component';
-import {WeatherItem} from './weather-item/weather-item.interface';
 
 @Injectable()
 export class WeatherService implements OnInit {
@@ -13,20 +11,17 @@ export class WeatherService implements OnInit {
   maxTempInC = [];
   day = [];
 
-  temperature = 0 ;
+  temperature = 0;
   weatherCondition = '';
   cityName = '';
   // private Key1 ='oNdnipNwzT4GJw8IJ1OnpJsQh1G0lgYG';
   private KEY = 'bKpCXKwVNJLAhn5ZZmuAeXzvfag844K6';
-  private autocomplete = 'http://dataservice.accuweather.com/locations/v1/cities/autocomplete';
-  private currentConditions = 'http://dataservice.accuweather.com/currentconditions/v1/';
-  private fiveDaysWeatherCast = 'http://dataservice.accuweather.com/forecasts/v1/daily/5day/';
+  private autocomplete = 'https://dataservice.accuweather.com/locations/v1/cities/autocomplete';
+  private currentConditions = 'https://dataservice.accuweather.com/currentconditions/v1/';
+  private fiveDaysWeatherCast = 'https://dataservice.accuweather.com/forecasts/v1/daily/5day/';
 
   constructor(private http: HttpClient) {
 
-  }
-
-  ngOnInit(): void {
   }
 
   autoComplete(key): Observable<any> {
@@ -76,7 +71,7 @@ export class WeatherService implements OnInit {
 
     console.log(res);
     for (let i = 0; i < 5; i++) {
-      let temperature = res.DailyForecasts[i].Temperature;
+      const temperature = res.DailyForecasts[i].Temperature;
       this.minTempInF[i] = temperature.Minimum.Value;
       this.maxTempInF[i] = temperature.Maximum.Value;
       this.minTempInC[i] = ((5 / 9) * (temperature.Minimum.Value - 32)).toFixed(0);
