@@ -5,20 +5,20 @@ import {Observable} from 'rxjs';
 @Injectable()
 export class WeatherService implements OnInit {
 
-  minTempInF = [];
-  maxTempInF = [];
-  minTempInC = [];
-  maxTempInC = [];
-  day = [];
+  minTempInF: string[] = [];
+  maxTempInF: string[] = [];
+  minTempInC: string[] = [];
+  maxTempInC: string[] = [];
+  day: string[] = [];
 
-  temperature = 0;
-  weatherCondition = '';
-  cityName = '';
+  temperature: number;
+  weatherCondition: string;
+  cityName: string;
   // private Key1 ='oNdnipNwzT4GJw8IJ1OnpJsQh1G0lgYG';
   private KEY = 'bKpCXKwVNJLAhn5ZZmuAeXzvfag844K6';
-  private autocomplete = 'https://dataservice.accuweather.com/locations/v1/cities/autocomplete';
-  private currentConditions = 'https://dataservice.accuweather.com/currentconditions/v1/';
-  private fiveDaysWeatherCast = 'https://dataservice.accuweather.com/forecasts/v1/daily/5day/';
+  private autocomplete = 'http://dataservice.accuweather.com/locations/v1/cities/autocomplete';
+  private currentConditions = 'http://dataservice.accuweather.com/currentconditions/v1/';
+  private fiveDaysWeatherCast = 'http://dataservice.accuweather.com/forecasts/v1/daily/5day/';
 
   constructor(private http: HttpClient) {
 

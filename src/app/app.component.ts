@@ -1,5 +1,4 @@
-import {Component, ElementRef, ViewChild} from '@angular/core';
-import {WeatherService} from './weather/weather.service';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +6,9 @@ import {WeatherService} from './weather/weather.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    color: boolean;
-    getColor(event){
-      this.color = event;
-    }
+  color: boolean;
+
+  getColor(event) {
+    this.color = event;
+  }
 }

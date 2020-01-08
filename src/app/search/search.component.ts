@@ -8,16 +8,17 @@ import {WeatherService} from '../weather/weather.service';
 
 })
 export class SearchComponent implements OnInit {
-  weatherItem;
-  query = '';
+
+  weatherItem: any;
+  query: string;
   key: string;
   selectedOption: any;
-
 
   constructor(private weatherService: WeatherService) {
   }
 
   ngOnInit() {
+    console.log('hello');
     this.weatherService.autoComplete('tel-aviv').subscribe((res) => {
         this.weatherItem = res;
         this.selectedOption = res[0];
@@ -47,7 +48,7 @@ export class SearchComponent implements OnInit {
       throw new Error('your error is:' + error1);
     });
     this.weatherService.get5DaysWeatherCast(this.key).subscribe(res => {
-      this.weatherService.set5Days(new Date(JSON.parse(JSON.stringify(res.DailyForecasts[0])).EpochDate).getDay());
+      this.weatherService.set5Days(JSON.parse(JSON.stringify(new Date((res.DailyForecasts[0]).EpochDate*1000).getDay())));
       this.weatherService.setTemp(res);
     }, err => {
       throw new Error('your error is:' + err);

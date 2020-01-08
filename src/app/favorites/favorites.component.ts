@@ -14,8 +14,10 @@ import * as WeatherActions from '../weather/store/weather.actions';
 export class FavoritesComponent implements OnInit {
   enableDelete = true;
   weather$: Observable<WeatherItem[]>;
-  index;
-  C = '℃';
+  index: number;
+  isFehrenhite: boolean = true;
+  F: string = '℉';
+  C: string = '℃';
 
   constructor(private weatherService: WeatherService, private store: Store<AppState>) {
     this.weather$ = this.store.select('weatherItem');

@@ -13,16 +13,17 @@ import * as WeatherActions from '../store/weather.actions';
   styleUrls: ['./weather-item.component.css'],
 })
 export class WeatherItemComponent implements OnInit {
+
   weather: Observable<WeatherItem[]>;
   weatherItem: WeatherItem;
-  checkForDuplicates;
 
   constructor(private weatherService: WeatherService, private store: Store<AppState>) {
+
   }
 
-  isFehrenhite = true;
-  F = '℉';
-  C = '℃';
+  F: string = '℉';
+  C: string = '℃';
+  isFehrenhite: boolean;
   cityName: string;
   temperature: number;
   weatherCondition: string;
@@ -33,11 +34,11 @@ export class WeatherItemComponent implements OnInit {
   day: string[];
 
   ngOnInit() {
-    // this.day = this.weatherService.day;
-    // this.maxF = this.weatherService.maxTempInF;
-    // this.minF = this.weatherService.minTempInF;
-    // this.maxC = this.weatherService.maxTempInC;
-    // this.minC = this.weatherService.minTempInC;
+    this.day = this.weatherService.day;
+    this.maxF = this.weatherService.maxTempInF;
+    this.minF = this.weatherService.minTempInF;
+    this.maxC = this.weatherService.maxTempInC;
+    this.minC = this.weatherService.minTempInC;
   }
 
   swapTempUnits() {
