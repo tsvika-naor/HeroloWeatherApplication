@@ -21,14 +21,51 @@
 
 }
 
-flex-container {
-  /*flex-grow: 1;*/
-  /*display: ruby-text-container;*/
-}
-
 button {
   margin-top: 20px;
   padding: 5px 35px;
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    height: 0.8%;
+    margin-right: 100px;
+  }
+
+  .child {
+
+    height: 80%;
+    alignment: center;
+  }
+
+  mat-card-title {
+
+    margin-right: 100px;
+    font-size: 70%;
+    text-align: left;
+  }
+
+  mat-card-subtitle {
+
+    margin-right: 100px;
+    font-size: 70%;
+    text-align: left;
+  }
+
+  mat-card {
+
+    margin-right: 100px;
+  }
+
+  .container-item {
+    margin-left: 20px;
+    alignment: left;
+    margin-right: 140px;
+  }
+
+  .button {
+    margin-right: 100px;
+    margin-top: 20px;
+  }
 }
 
 
