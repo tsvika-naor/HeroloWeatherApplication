@@ -15,20 +15,19 @@
   max-height: 100%;
   width: 100%;
   margin-top: 50px;
-  margin-left: 50px;
-  display: flex;
-  flex-wrap: nowrap;
+  /*margin-left: 50px;*/
+  /*display: flex;*/
+  /*flex-wrap: nowrap;*/
 
 }
 
 flex-container {
-  flex-grow: 1;
-  display: ruby-text-container;
+  /*flex-grow: 1;*/
+  /*display: ruby-text-container;*/
 }
 
 button {
   margin-top: 20px;
-  margin-left: 250px;
   padding: 5px 35px;
 }
 
