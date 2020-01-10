@@ -12,7 +12,7 @@ import * as WeatherActions from '../weather/store/weather.actions';
   styleUrls: ['./favorites.component.css']
 })
 export class FavoritesComponent implements OnInit {
-  enableDelete = true;
+  enableDelete:boolean = true;
   weather$: Observable<WeatherItem[]>;
   index: number;
   isFehrenhite: boolean = true;
