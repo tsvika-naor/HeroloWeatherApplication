@@ -44,7 +44,7 @@
   .header a {
     /*float: none;*/
     text-align: center;
-    /*font-size: 15px;*/
+    font-size: 10px;
   }
 
   .header-right {
@@ -53,6 +53,9 @@
     text-align: center;
 
 
+  }
+  .header-right-item{
+    font-size: 10px
   }
   /*.container {*/
   /*  background: #fff;*/
