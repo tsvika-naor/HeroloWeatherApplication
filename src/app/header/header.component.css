@@ -91,12 +91,6 @@
   background-color: rebeccapurple;
 }
 
-@media (max-width: 840px) {
-  body {
-    flex-direction: column;
-  }
-}
-
 footer {
   background-color: #222;
   color: #fff;

@@ -9,9 +9,9 @@
 }
 
 @media {
-  .custom-container {
+  .my-custom-container {
     margin: auto;
-    max-width: 800px;
+    max-width: 600px;
     padding-bottom: 50px;
   }
 }

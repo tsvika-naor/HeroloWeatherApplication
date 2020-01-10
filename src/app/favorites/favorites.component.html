@@ -5,11 +5,11 @@
     <div *ngFor="let weather of weather$ | async ; let index = index" fxFlexAlign="center">
 
       <div *ngIf="isFehrenhite">
-      <mat-card class="child" (click)="passIndex(index)">
-        <mat-card-title>{{weather.cityName}}</mat-card-title>
-        <mat-card-subtitle>{{weather.temperature}}{{F}}</mat-card-subtitle>
-        <mat-card-subtitle>{{weather.weatherCondition}}</mat-card-subtitle>
-      </mat-card>
+        <mat-card class="child" (click)="passIndex(index)">
+          <mat-card-title>{{weather.cityName}}</mat-card-title>
+          <mat-card-subtitle>{{weather.temperature}}{{F}}</mat-card-subtitle>
+          <mat-card-subtitle>{{weather.weatherCondition}}</mat-card-subtitle>
+        </mat-card>
       </div>
 
       <div *ngIf="!isFehrenhite">
