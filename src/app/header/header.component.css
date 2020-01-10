@@ -43,13 +43,13 @@
 
   .header a {
     /*float: none;*/
-    text-align: center;
+    /*text-align: center;*/
     font-size: 10px;
   }
 
-  .header-right {
+  .header-right {text-align: center;
     /*float: none;*/
-    display: block;
+    /*display: block */
     text-align: center;
 
 

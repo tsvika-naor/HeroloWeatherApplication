@@ -24,7 +24,40 @@ button {
   margin-top: 20px;
   padding: 5px 35px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
+  .container {
+    height: 0.8%;
+  }
+
+  /*.child {*/
+  /*  height: 80%;*/
+  /*}*/
+
+  .mat-card-title {
+
+    font-size: 70%;
+    text-align: center;
+  }
+
+  .mat-card-subtitle {
+
+    font-size: 70%;
+    text-align: center;
+  }
+
+  .mat-card {
+
+    width: 70px;
+    height: 80%;
+
+  }
+
+  .button {
+    margin-right: 100px;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
   .container {
     height: 0.8%;
     margin: auto;
