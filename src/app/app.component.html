@@ -1,8 +1,8 @@
-<div class="media">
+
 <app-header (changeColor)="getColor($event)"></app-header>
 <div [ngStyle]="{'background-color':color === true ? ' lightslategrey' : 'white'  }">
   <app-search></app-search>
-  <div class="custom-container">
+  <div class="container">
     <div class="row">
       <div class="col-xs-12">
         <div class="bg">
@@ -11,5 +11,4 @@
       </div>
     </div>
   </div>
-</div>
 </div>

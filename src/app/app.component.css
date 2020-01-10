@@ -8,11 +8,8 @@
   border: 3px solid rebeccapurple;
 }
 
-@media {
-  .my-custom-container {
-    margin: auto;
-    max-width: 600px;
-    padding-bottom: 50px;
-  }
-}
+/*.container {*/
+/*  width: 900px;*/
+/*}*/
+
 
