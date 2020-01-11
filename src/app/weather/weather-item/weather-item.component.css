@@ -77,7 +77,7 @@ button {
   .mat-card-title {
 
     font-size: 60%;
-    text-align: left;
+    text-align: center;
   }
 
   .mat-card-subtitle {
@@ -88,7 +88,7 @@ button {
 
   .mat-card {
 
-    width: 50px;
+    width: 60px;
     height: 80%;
 
   }
@@ -111,21 +111,24 @@ button {
   }
 
   .mat-card-title {
-    text-align: left;
+    text-align: center;
     font-size: 50%;
   }
 
   .mat-card-subtitle {
 
     font-size: 50%;
-    text-align: center;
+    position: center;
+    align-items: center;
+    display: flex;
   }
 
   .mat-card {
     text-align: left;
-    width: 30px;
+    width: 70px;
     padding-right: 1px;
     height: 80%;
+    /*transform: translate(-50%,0);*/
   }
 
   .btn {
@@ -139,8 +142,10 @@ button {
   }
 }
 
-@media only screen and (max-height: 350px) {
+@media only screen and (max-height: 400px) {
   .mat-card {
+    height: 120%;
+    width: 60px;
     font-size: 80%;
     max-height: 120px;
   }
