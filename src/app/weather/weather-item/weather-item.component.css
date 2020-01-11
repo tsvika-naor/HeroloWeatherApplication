@@ -159,6 +159,48 @@ button {
     margin-bottom: 15px;
   }
 }
+@media only screen and (max-width: 500px) {
+  .btn-group{
+    margin-top: 10px;
+  }
+  .container {
+    /*padding-left: 10px;*/
+    position: center;
+    transform: translate(-5%);
+    /*height: 0.8%;*/
+  }
+
+  .mat-card-title {
+    text-align: center;
+    font-size: 90%;
+  }
+
+  .mat-card-subtitle {
+
+    font-size: 90%;
+    align-items: center;
+    /*display: flex;*/
+  }
+
+  .mat-card {
+    text-align: center;
+    padding: 25px 5px;
+    width: 80%;
+    /*height: 80%;*/
+    /*transform: translate(-50%,0);*/
+  }
+
+  .btn {
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 5px;
+    padding: 10px 10px;
+  }
+  button{
+    transform: translate(0%,-30%);
+    margin-bottom: 15px;
+  }
+}
 
 @media only screen and (max-height: 400px) {
   .mat-card {
