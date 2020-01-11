@@ -48,7 +48,13 @@ button {
 
 @media only screen and (max-width: 1000px) {
   .container {
-    transform: translate(0%,-60%);
+    padding-top: 10px;
+    transform: translate(0%,-40%);
+  }
+  .mat-card {
+
+    width: 90%;
+    height: 90%;
   }
 }
 
@@ -113,11 +119,17 @@ button {
     transform: translate(0%,-30%);
     margin-bottom: 15px;
   }
+  .btn-group{
+    margin-top: 10px;
+  }
 }
 
 @media only screen and (max-height: 650px) {
+  .btn-group{
+    margin-top: 10px;
+  }
   .container {
-    transform: translate(0%,-25%);
+    transform: translate(0%,-10%);
   }
   .mat-card {
     margin-top: -2px ;
@@ -135,7 +147,35 @@ button {
 
   }
 
-}
+  @media only screen and (max-height: 520px) {
+    .btn-group {
+      margin-top: 10px;
+    }
+
+    .container {
+      transform: translate(0%, -17%);
+    }
+
+    .mat-card {
+      padding: 25px 16px;
+      margin-top: -2px;
+      height: 80%;
+      width: 80%;
+    }
+
+    .mat-card-title {
+      font-size: 60%;
+      text-align: center;
+
+    }
+
+    .mat-card-subtitle {
+      font-size: 60%;
+      text-align: center;
+
+    }
+  }
+  }
 
 
 
