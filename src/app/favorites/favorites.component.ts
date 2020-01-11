@@ -95,7 +95,7 @@ export class FavoritesComponent implements OnInit {
         return 'url(\'https://cdn.pixabay.com/photo/2017/06/16/00/22/fog-2407344_960_720.jpg\')';
       }
       case 'Foggy': {
-        return 'url(\'https://image.posterlounge.com/img/products/670000/664120/664120_poster_l.jpg\')';
+        return 'url(\'https://live.staticflickr.com/7702/17123779431_6a2ac7b7b9_b.jpg\')';
       }
 
     }
