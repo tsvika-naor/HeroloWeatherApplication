@@ -1,5 +1,6 @@
 export interface WeatherItem {
   cityName: string;
-  temperature: number;
+  temperatureImperial: number;
+  temperatureMetric: number;
   weatherCondition: string;
 }

@@ -1,14 +1,10 @@
-<div class="row">
-  <button id="btn-add"  class="btn btn-primary" style="cursor: pointer" role="button" (click)="onSelect()">Add To Favorits
+<div class="btn-group" role="group" >
+  <button type="button" class="btn btn-primary" style="cursor: pointer" role="button" (click)="onSelect()">Add To Favorits
   </button>
-<div *ngIf="isFehrenhite">
-  <button  class="btn btn-pill btn-primary"  (click)="swapTempUnits()" >℃</button>
+  <button *ngIf="isFehrenhite" type="button"  class="btn btn-pill btn-primary"  (click)="swapTempUnits()" >℃</button>
+  <button *ngIf="!isFehrenhite" type="button" class="btn btn-pill btn-success" (click)="swapTempUnits()" >℉</button>
 </div>
-<div *ngIf="!isFehrenhite">
-  <button  class="btn btn-pill btn-success" (click)="swapTempUnits()" >℉</button>
-</div>
-</div>
-<div class="container" fxLayout="row" fxLayout.xs="row"  fxLayoutAlign="center">
+<div class="container" fxLayout="row" fxLayout.xs="row" fxLayoutGap="-4%"  fxLayoutAlign="center" style="margin-top: 20px">
   <div class="container-item" *ngFor="let day of day ;let index = index" fxFlex="20%" fxFlexAlign="center" style="background-color: transparent">
     <div *ngIf="isFehrenhite">
       <mat-card class="child">

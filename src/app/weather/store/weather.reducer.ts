@@ -1,5 +1,4 @@
 import * as WeatherActions from './weather.actions';
-import {Action} from '@ngrx/store';
 import {WeatherItem} from '../weather-item/weather-item.interface';
 
 export function reducer(state: WeatherItem[] = [], action: WeatherActions.ACTIONS) {
@@ -9,6 +8,10 @@ export function reducer(state: WeatherItem[] = [], action: WeatherActions.ACTION
       return [...state, action.payload];
     }
     case WeatherActions.REMOVE_CITY: {
+      state.splice(action.payload, 1);
+      return state;
+    }
+    case WeatherActions.REMOVE_ALL_CITIES: {
       state.splice(action.payload, 1);
       return state;
     }

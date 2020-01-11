@@ -7,7 +7,6 @@ const appRoutes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: WeatherComponent},
   {path: 'favorites', component: FavoritesComponent},
-  // {path: 'mat', component: MatComponent}
 ];
 
 @NgModule({

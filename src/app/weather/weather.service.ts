@@ -11,7 +11,8 @@ export class WeatherService implements OnInit {
   maxTempInC: string[] = [];
   day: string[] = [];
 
-  temperature: number;
+  temperatureImperial: number;
+  temperatureMetric: number;
   weatherCondition: string;
   cityName: string;
   // private Key1 ='oNdnipNwzT4GJw8IJ1OnpJsQh1G0lgYG';

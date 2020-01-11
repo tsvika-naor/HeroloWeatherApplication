@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
 import {Action} from '@ngrx/store';
 import {WeatherItem} from '../weather-item/weather-item.interface';
 
 export const ADD_CITY = 'ADD_CITY';
 export const REMOVE_CITY = 'REMOVE_CITY';
+export const REMOVE_ALL_CITIES = 'REMOVE_All_CITIES';
 
 
  export class AddCity implements Action {
@@ -18,5 +18,10 @@ export class RemoveCity implements Action {
   readonly type = REMOVE_CITY;
   constructor(public payload: number){}
 }
+export class RemoveAllCities implements Action {
 
-export type ACTIONS = AddCity | RemoveCity
+  readonly type = REMOVE_ALL_CITIES;
+  constructor(public payload: number){}
+}
+
+export type ACTIONS = AddCity | RemoveCity | RemoveAllCities

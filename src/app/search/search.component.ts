@@ -42,8 +42,10 @@ export class SearchComponent implements OnInit {
     this.key = this.selectedOption.Key;
     this.weatherService.cityName = this.selectedOption.LocalizedName;
     this.weatherService.getCurrentWeather(this.key).subscribe(res => {
+      console.log(res[0].Temperature);
       this.weatherService.weatherCondition = res[0].WeatherText;
-      this.weatherService.temperature = res[0].Temperature.Imperial.Value;
+      this.weatherService.temperatureImperial = res[0].Temperature.Imperial.Value.toFixed(0);//F
+      this.weatherService.temperatureMetric = res[0].Temperature.Metric.Value.toFixed(0);//C
     }, error1 => {
       throw new Error('your error is:' + error1);
     });

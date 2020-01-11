@@ -20,12 +20,14 @@ export class WeatherItemComponent implements OnInit {
   constructor(private weatherService: WeatherService, private store: Store<AppState>) {
 
   }
-
+  allow: boolean = true;
+  addedCities: string[] = [];
   F: string = '℉';
   C: string = '℃';
   isFehrenhite: boolean;
   cityName: string;
-  temperature: number;
+  temperatureImperial: number;
+  temperatureMetric: number;
   weatherCondition: string;
   maxF: string[];
   minF: string[];
@@ -46,14 +48,25 @@ export class WeatherItemComponent implements OnInit {
   }
 
   onSelect() {
+    this.allow = true;
     this.cityName = this.weatherService.cityName;
-    this.temperature = this.weatherService.temperature;
+    this.temperatureImperial = this.weatherService.temperatureImperial;
+    this.temperatureMetric = this.weatherService.temperatureMetric;
     this.weatherCondition = this.weatherService.weatherCondition;
+    for (let i = 0 ;i<this.addedCities.length;i++){
+      if(this.addedCities[i] === this.cityName) {
+        this.allow = false;
+        break;
+      }
+    }
+    if(this.allow){
+      this.addedCities.push(this.cityName);
     this.store.dispatch(new WeatherActions.AddCity({
       cityName: this.cityName,
-      temperature: this.temperature,
+      temperatureImperial: this.temperatureImperial,
+      temperatureMetric: this.temperatureMetric,
       weatherCondition: this.weatherCondition
     }));
-  }
+  }}
 
 }
