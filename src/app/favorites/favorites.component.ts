@@ -88,6 +88,9 @@ export class FavoritesComponent implements OnInit {
       case 'Light fog': {
         return 'url(\'https://cdn.pixabay.com/photo/2017/06/16/00/22/fog-2407344_960_720.jpg\')';
       }
+      case 'Foggy': {
+        return 'url(\'https://image.posterlounge.com/img/products/670000/664120/664120_poster_l.jpg\')';
+      }
 
     }
   }
