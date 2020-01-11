@@ -125,27 +125,19 @@ button {
 
 @media only screen and (max-width: 500px) {
   .container {
-    padding-bottom: 30px;
-    position: center;
-    transform: translate(-5%);
   }
 
   .mat-card-title {
-    text-align: center;
-    font-size: 50%;
+    font-size: 60%;
   }
 
   .mat-card-subtitle {
-
-    font-size: 50%;
-    position: center;
-    align-items: center;
+    font-size: 60%;
   }
 
   .mat-card {
-    text-align: center;
-    width: 70%;
-    height: 50%;
+    height: 80%;
+    width: 80%;
   }
 
   .btn {

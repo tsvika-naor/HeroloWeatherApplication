@@ -67,6 +67,9 @@ export class FavoritesComponent implements OnInit {
       case 'Rainy' : {
         return 'url(\'https://www.guilford.edu/sites/default/files/styles/full_image_large_scale/public/images/2018-11/rain-drops-on-window-1827098_1920.jpg?itok=pccWva6b\')';
       }
+      case 'A shower' : {
+        return 'url(\'https://www.guilford.edu/sites/default/files/styles/full_image_large_scale/public/images/2018-11/rain-drops-on-window-1827098_1920.jpg?itok=pccWva6b\')';
+      }
       case 'Clear': {
         return 'url(\'https://img4.goodfon.com/wallpaper/nbig/e/cc/nebo-oblaka-iasnaia-pogoda-solntse-priroda.jpg\')';
       }
