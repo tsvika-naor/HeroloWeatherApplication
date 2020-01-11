@@ -77,7 +77,7 @@ export class FavoritesComponent implements OnInit {
         return 'url(\'http://2.bp.blogspot.com/-QK3z166ztbg/URChSc5I-dI/AAAAAAAAAIo/BEoDCQNNzic/s1600/mostly+sunny.jpg\')';
       }
       case 'Some clouds': {
-        return 'url(\'https://www.fau.eu/files/2016/01/Wolken_Colourbox.jpg\')';
+        return 'url(\'https://somuchtoseesomuchtodo.files.wordpress.com/2011/06/sky-and-clouds.jpg\')';
       }
       case 'Mostly clear': {
         return 'url(\' https://ak8.picdn.net/shutterstock/videos/1007359978/thumb/2.jpg\')';
