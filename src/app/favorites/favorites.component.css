@@ -8,12 +8,17 @@
   text-align: center;
   border: 3px solid black;
 }
+
+
+
+
+
+
 .mat-card {
   margin-top: 5px;
   font-weight: bold;
   /*background-image: url('https://cdn.dodowallpaper.com/full/761/sky-hd-1.jpg');*/
   background-size: cover;
-  background-color: transparent;
   width: 140px;
   height: 160px;
   border: 3px solid black;
@@ -50,39 +55,40 @@ button {
 }
 
 @media only screen and (max-width: 1000px) {
-  .container{
-    padding-top: 15px;
-  }
-
-
-  .mat-card-title {
-
-    font-size: 70%;
-    text-align: center;
-  }
-
-  .mat-card-subtitle {
-
-    font-size: 70%;
-    text-align: center;
-  }
-
-  .mat-card {
-    margin-left: 30px;
-    width: 70px;
-    height: 80%;
-
-  }
-  button{
-    margin-bottom: 15px;
-  }
-  .btn {
-    margin-bottom: 15px;
-    text-align: center;
-    padding: 15px 24px;
-
+  .container {
+    transform: translate(0%, -20%);
   }
 }
+
+
+/*  .mat-card-title {*/
+
+/*    font-size: 70%;*/
+/*    text-align: center;*/
+/*  }*/
+
+/*  .mat-card-subtitle {*/
+
+/*    font-size: 70%;*/
+/*    text-align: center;*/
+/*  }*/
+
+/*  .mat-card {*/
+/*    margin-left: 30px;*/
+/*    width: 70px;*/
+/*    height: 80%;*/
+
+/*  }*/
+/*  button{*/
+/*    margin-bottom: 15px;*/
+/*  }*/
+/*  .btn {*/
+/*    margin-bottom: 15px;*/
+/*    text-align: center;*/
+/*    padding: 15px 24px;*/
+
+/*  }*/
+/*}*/
 
 @media only screen and (max-width: 768px) {
 .container{
@@ -155,21 +161,27 @@ button {
 }
 
 @media only screen and (max-height: 500px) {
-
+  .container {
+    transform: translate(0%,-20%);
+  }
   .mat-card {
-    transform: translate(-5%,-80%);
-    font-size: 80%;
-    position: center;
-
+    height: 90%;
+    width: 90%;
+  }
+  .mat-card-title {
+    font-size: 70%;
+  }
+  .mat-card-subtitle {
+    font-size: 70%;
   }
   .btn {
-    margin-bottom: 15px;
-    text-align: center;
-    font-size: 5px;
-    padding: 10px 10px;
+    /*margin-bottom: 15px;*/
+    /*text-align: center;*/
+    /*font-size: 5px;*/
+    /*padding: 10px 10px;*/
   }
   button{
-    margin-bottom: 15px;
+    /*margin-bottom: 15px;*/
   }
 
 }

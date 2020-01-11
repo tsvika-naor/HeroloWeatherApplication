@@ -70,6 +70,9 @@ export class FavoritesComponent implements OnInit {
       case 'Clear': {
         return 'url(\'https://img4.goodfon.com/wallpaper/nbig/e/cc/nebo-oblaka-iasnaia-pogoda-solntse-priroda.jpg\')';
       }
+      case 'Clouds and sun': {
+        return 'url(\'https://img4.goodfon.com/wallpaper/nbig/e/cc/nebo-oblaka-iasnaia-pogoda-solntse-priroda.jpg\')';
+      }
       case 'Overcast': {
         return 'url(\'https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/overcast-weather-in-bantry-bay-luke-white.jpg\')';
       }
