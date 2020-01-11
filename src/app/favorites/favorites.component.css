@@ -60,7 +60,6 @@ button {
 
 @media only screen and (max-width: 768px) {
 .container{
-  padding-top: 30px;
   padding-right: 40px
 }
   .mat-card-title {
@@ -123,6 +122,12 @@ button {
     margin-top: 10px;
   }
 }
+@media only screen and (max-width: 450px) {
+  .container {
+    padding-top: 20px;
+  }
+  }
+
 
 @media only screen and (max-height: 650px) {
   .btn-group{
