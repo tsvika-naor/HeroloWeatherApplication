@@ -12,7 +12,7 @@
   <div class="container-item" *ngFor="let day of day ;let index = index" fxFlex="20%" fxFlexAlign="center" style="background-color: transparent">
     <div *ngIf="isFehrenhite">
       <mat-card class="child">
-        <mat-card-title>{{day}}</mat-card-title>
+        <mat-card-title >{{day}}</mat-card-title>
         <mat-card-subtitle>{{'Min'}} / {{'Max'}}  </mat-card-subtitle>
         <mat-card-subtitle>{{minF[index]}}{{F}}/
           {{maxF[index]}}{{F}}</mat-card-subtitle>

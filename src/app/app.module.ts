@@ -16,7 +16,11 @@ import {
   MatRadioModule,
   MatOptionModule,
   MatSelectModule,
-  MatCardModule, MatToolbarModule, MatGridListModule, MatDividerModule, MatIconModule
+  MatCardModule,
+  MatToolbarModule,
+  MatGridListModule,
+  MatDividerModule,
+  MatIconModule
 } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { WeatherItemComponent } from './weather/weather-item/weather-item.component';
@@ -26,6 +30,7 @@ import {DropdownDirective} from './shared/dropdown.directive';
 import {StoreModule} from '@ngrx/store';
 import {reducer} from './weather/store/weather.reducer';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
+
 
 @NgModule({
   declarations: [

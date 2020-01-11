@@ -1,26 +1,32 @@
 <h3 style="text-align: center;font-family: Aharoni ">My Favorits Cities</h3>
-<button class="btn btn-primary" (click)="removeCity()" [disabled]="enableDelete">Remove City</button>
-<div class="container">
-  <div class="container" fxLayout="row" fxLayout.xs="row" fxLayoutGap="2%" fxLayoutAlign="center">
-    <div *ngFor="let weather of weather$ | async ; let index = index" fxFlexAlign="center">
 
-      <div *ngIf="isFehrenhite">
-        <mat-card class="child" (click)="passIndex(index)">
-          <mat-card-title>{{weather.cityName}}</mat-card-title>
-          <mat-card-subtitle>{{weather.temperature}}{{F}}</mat-card-subtitle>
-          <mat-card-subtitle>{{weather.weatherCondition}}</mat-card-subtitle>
-        </mat-card>
-      </div>
 
-      <div *ngIf="!isFehrenhite">
-        <mat-card class="child" (click)="passIndex(index)">
-          <mat-card-title>{{weather.cityName}}</mat-card-title>
-          <mat-card-subtitle>{{weather.temperature}}{{C}}</mat-card-subtitle>
-          <mat-card-subtitle>{{weather.weatherCondition}}</mat-card-subtitle>
-        </mat-card>
-      </div>
+<button class="btn btn-primary" (click)="removeCity()" [disabled]="enableDelete" style="margin-bottom: 25px">Remove
+  City
+</button>
+<div class="container" fxLayout="row wrap"  fxLayoutGap="2%" fxLayoutAlign="center">
+  <div *ngFor="let weather of weather$ | async ; let index = index" fxFlexAlign="center">
 
+    <div *ngIf="isFehrenhite" [ngStyle]="backgroundStyle(weather.weatherCondition)">
+      <mat-card (click)="passIndex(index)" [style.background-image]="backgroundImg">
+        <mat-card-title>{{weather.cityName}}</mat-card-title>
+        <mat-card-subtitle>{{weather.temperature}}{{F}}</mat-card-subtitle>
+        <mat-card-subtitle>{{weather.weatherCondition}}</mat-card-subtitle>
+      </mat-card>
+    </div>
+
+    <div *ngIf="!isFehrenhite" [ngStyle]="backgroundStyle(weather.weatherCondition)">
+      <mat-card (click)="passIndex(index)" [style.background-image]="backgroundImg">
+        <mat-card-title>{{weather.cityName}}</mat-card-title>
+        <mat-card-subtitle>{{weather.temperature}}{{C}}</mat-card-subtitle>
+        <mat-card-subtitle>{{weather.weatherCondition}}</mat-card-subtitle>
+      </mat-card>
     </div>
   </div>
 </div>
+
+
+
+
+
 
