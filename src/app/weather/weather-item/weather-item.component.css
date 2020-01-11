@@ -36,7 +36,7 @@ button {
 .btn {
   margin-top: 20px;
   text-align: center;
-  padding: 10px 10px;
+  padding: 15px 24px;
 
 }
 
@@ -60,7 +60,7 @@ button {
   }
 
   .mat-card {
-
+    margin-left: 30px;
     width: 70px;
     height: 80%;
 
@@ -71,7 +71,7 @@ button {
   .btn {
     margin-top: 20px;
     text-align: center;
-    padding: 10px 10px;
+    padding: 15px 24px;
 
   }
 }
@@ -79,43 +79,39 @@ button {
 @media only screen and (max-width: 768px) {
   .container {
     height: 0.8%;
-    margin: auto;
   }
-
   .mat-card-title {
-
     font-size: 60%;
     text-align: center;
   }
 
   .mat-card-subtitle {
-
     font-size: 60%;
     text-align: center;
   }
-
   .mat-card {
-    margin-left: 15px;
-    width: 60px;
+    padding: 20px;
+    transform: translate(-20%);
+    width: 80%;
     height: 80%;
-
   }
-
   .btn {
 
     margin-top: 15px;
     text-align: center;
     font-size: 5px;
-    padding: 10px 10px;
+    padding: 15px 24px;
   }
   button{
     margin-top: 10px;
   }
 }
 
-@media only screen and (max-width: 330px) {
+@media only screen and (max-width: 400px) {
   .container {
-    margin: auto;
+    /*padding-left: 10px;*/
+    position: center;
+    transform: translate(-10%);
     height: 0.8%;
   }
 
@@ -135,7 +131,6 @@ button {
   .mat-card {
 
     text-align: left;
-    width: 70px;
     padding-right: 1px;
     height: 80%;
     /*transform: translate(-50%,0);*/
@@ -167,6 +162,9 @@ button {
   }
   button{
     margin-top: 10px;
+  }
+  .btn-add {
+    margin-top: 30px;
   }
 
 }
