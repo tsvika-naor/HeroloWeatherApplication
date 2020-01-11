@@ -1,8 +1,8 @@
 <div *ngIf="isFehrenhite">
-  <button class="btn btn-primary" (click)="swapTempUnits()" >℃</button>
+  <button id="btn-tempC" class="btn btn-primary"  (click)="swapTempUnits()" >℃</button>
 </div>
 <div *ngIf="!isFehrenhite">
-  <button class="btn btn-success" (click)="swapTempUnits()" >℉</button>
+  <button id="btn-tempF" class="btn btn-success" (click)="swapTempUnits()" >℉</button>
 </div>
 <button class="btn btn-primary" style="cursor: pointer" role="button" (click)="onSelect()">Add To Favorits
 </button>

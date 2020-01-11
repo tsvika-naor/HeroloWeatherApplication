@@ -1,6 +1,5 @@
 .child {
   font-weight: bold;
-  font-size: 120%;
   margin-top: 20px;
   background-position: center center;
   /*background-image: url('https://cdn.dodowallpaper.com/full/761/sky-hd-1.jpg');*/
@@ -18,10 +17,21 @@
   margin-top: 50px;
 
 }
+.mat-card-title {
+
+  /*font-size: 70%;*/
+  text-align: center;
+}
+
+.mat-card-subtitle {
+
+  font-size: 1.75rem;
+  text-align: center ;
+  transform: translate(0, 50%) ;
+}
 
 button {
-  margin-top: 20px;
-  padding: 5px 35px;
+  margin-top: 10px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -47,10 +57,13 @@ button {
     height: 80%;
 
   }
-
+  button{
+    margin-top: 10px;
+  }
   .btn {
-    margin-right: 100px;
     margin-top: 20px;
+    text-align: center;
+    padding: 10px 10px;
 
   }
 }
@@ -81,9 +94,13 @@ button {
   }
 
   .btn {
-    margin: auto;
+    margin: 5px;
     text-align: center;
-    font-size: 5px
+    font-size: 5px;
+    padding: 10px 10px;
+  }
+  button{
+    margin-top: 10px;
   }
 }
 
@@ -112,10 +129,13 @@ button {
   }
 
   .btn {
-    margin: auto;
+    margin-top: 5px;
     text-align: center;
     font-size: 5px;
-    padding: 5px 5px;
+    padding: 10px 10px;
+  }
+  button{
+    margin-top: 10px;
   }
 }
 
@@ -125,10 +145,13 @@ button {
     max-height: 120px;
   }
   .btn {
-    margin: auto;
+    margin-top: 5px;
     text-align: center;
     font-size: 5px;
-    padding: 5px 5px;
+    padding: 10px 10px;
+  }
+  button{
+    margin-top: 10px;
   }
 }
 
