@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  color: boolean;
+  color: boolean = true;
 
   getColor(event) {
     this.color = event;
