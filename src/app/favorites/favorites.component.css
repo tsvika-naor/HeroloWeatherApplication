@@ -48,7 +48,7 @@ button {
 
 @media only screen and (max-width: 1000px) {
   .container {
-    transform: translate(0%, -20%);
+    transform: translate(0%,-60%);
   }
 }
 
@@ -84,16 +84,18 @@ button {
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 650px) {
   .container {
   }
 
   .mat-card-title {
     font-size: 60%;
+    text-align: center;
   }
 
   .mat-card-subtitle {
     font-size: 60%;
+    text-align: center;
   }
 
   .mat-card {
@@ -115,21 +117,24 @@ button {
 
 @media only screen and (max-height: 500px) {
   .container {
-    transform: translate(0%,-20%);
+    transform: translate(0%,-25%);
   }
   .mat-card {
-    height: 90%;
-    width: 90%;
+    margin-top: -2px ;
+    height: 80%;
+    width: 80%;
   }
   .mat-card-title {
-    font-size: 70%;
+    font-size: 60%;
+    text-align: center;
+
   }
   .mat-card-subtitle {
-    font-size: 70%;
+    font-size: 60%;
+    text-align: center;
+
   }
-  .btn {
-  padding: 15px 24px;
-}
+
 }
 
 
