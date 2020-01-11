@@ -33,10 +33,18 @@
 button {
   margin-top: 10px;
 }
+.btn {
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px 10px;
+
+}
 
 @media only screen and (max-width: 1000px) {
   .container {
     height: 0.8%;
+    margin: auto;
+
   }
 
   .mat-card-title {
@@ -68,7 +76,7 @@ button {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .container {
     height: 0.8%;
     margin: auto;
@@ -87,13 +95,14 @@ button {
   }
 
   .mat-card {
-
+    margin-left: 15px;
     width: 60px;
     height: 80%;
 
   }
 
   .btn {
+
     margin-top: 15px;
     text-align: center;
     font-size: 5px;
@@ -124,6 +133,7 @@ button {
   }
 
   .mat-card {
+
     text-align: left;
     width: 70px;
     padding-right: 1px;
