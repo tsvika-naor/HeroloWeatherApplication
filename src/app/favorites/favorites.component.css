@@ -1,12 +1,11 @@
 .bg {
-  margin-top: 20px;
-  position: relative;
-  width: 100%;
-  height: 80vh;
-  background-color: rebeccapurple;
+  /*margin-top: 20px;*/
+  /*position: relative;*/
+  /*width: 100%;*/
+  /*height: 80vh;*/
   /*background-size: cover;*/
-  text-align: center;
-  border: 3px solid black;
+  /*text-align: center;*/
+  /*border: 3px solid black;*/
 }
 
 .mat-card {
@@ -83,6 +82,9 @@
   .mat-card-subtitle {
     font-size:70%;
     text-align: center;
+  }
+  .bg{
+    border: none;
   }
 }
 

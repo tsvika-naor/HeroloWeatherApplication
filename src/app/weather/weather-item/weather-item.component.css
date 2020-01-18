@@ -1,3 +1,11 @@
+.background
+{
+  padding:0;
+  margin:0;
+  background: rebeccapurple;
+  background: url('https://images.unsplash.com/photo-1528872042734-8f50f9d3c59b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+  background-size: 100% 100%;
+}
 .box {
 
   background-color: transparent;
@@ -128,7 +136,6 @@ button {
 }
 
   .mat-card-title {
-
     font-size: 50%;
     text-align: center;
   }
