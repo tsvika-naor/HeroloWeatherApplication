@@ -1,5 +1,5 @@
 import {Action} from '@ngrx/store';
-import {WeatherItem} from '../weather-item/weather-item.interface';
+import {WeatherItem} from '../weather-item/weather-item.class';
 
 export const ADD_CITY = 'ADD_CITY';
 export const REMOVE_CITY = 'REMOVE_CITY';

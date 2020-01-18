@@ -26,7 +26,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { WeatherItemComponent } from './weather/weather-item/weather-item.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatChipsModule} from '@angular/material';
-import {DropdownDirective} from './shared/dropdown.directive';
 import {StoreModule} from '@ngrx/store';
 import {reducer} from './weather/store/weather.reducer';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
@@ -40,7 +39,6 @@ import {AngularFontAwesomeModule} from 'angular-font-awesome';
     SearchComponent,
     WeatherComponent,
     WeatherItemComponent,
-    DropdownDirective,
   ],
   imports: [
     StoreModule.forRoot( { weatherItem : reducer }),

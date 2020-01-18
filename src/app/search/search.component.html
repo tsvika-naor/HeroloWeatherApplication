@@ -1,26 +1,20 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-4">
-    </div>
-    <div class="col-xs-4">
-      <div class="form-group">
-        <label for="query"></label>
-        <input type="text" (keyup)="onKeypress($event)" class="form-control" id="query" placeholder="search city..."
-               style="margin-bottom: 5px">
-
-        <select class='form-control' name="search" [(ngModel)]="selectedOption"
-                style="cursor: pointer" (change)="onSeletct()">
-          <option label="{{item.LocalizedName}}" *ngFor="let item of weatherItem"
-                  [ngValue]="(item)">{{item.LocalizedName}}</option>
-        </select>
-
+<div class="center" style=" text-align: center">
+      <mat-form-field>
+        <input matInput type="text" (keyup)="onKeypress($event)" placeholder="enter city name" class="form-control" id="query" value="Tel-Aviv"  style="margin-bottom: 5px">
+        <mat-select class='form-control' name="search" [(ngModel)]="selectedOption"  style="cursor: pointer" (selectionChange)="onSelect()" [ngStyle]="{'background-color':'rebeccapurple'}">
+          <mat-option *ngFor="let item of weatherItem"  [value]="item" [ngStyle]="{'background-color':'rebeccapurple'}" >
+            {{item.LocalizedName}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
       </div>
     </div>
-  </div>
-
-  <div class="col-xs-4">
-  </div>
 </div>
+
+
+
 
 
 

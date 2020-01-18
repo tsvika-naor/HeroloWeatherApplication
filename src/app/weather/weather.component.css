@@ -1,10 +1,9 @@
-
-.bg {
-  position: relative;
-  width: 100%;
-  height: 80vh;
-  background: url('https://images.pexels.com/photos/258100/pexels-photo-258100.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
-  background-size: cover;
-  text-align: center;
-  border: 3px solid rebeccapurple;
+.background
+{
+  padding:0;
+  margin:0;
+  background: rebeccapurple;
+  background: url('https://images.unsplash.com/photo-1528872042734-8f50f9d3c59b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+  background-size: 100% 100%;
 }
+

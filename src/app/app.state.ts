@@ -1,4 +1,4 @@
-import {WeatherItem} from './weather/weather-item/weather-item.interface';
+import {WeatherItem} from './weather/weather-item/weather-item.class';
 
 
 export interface AppState {

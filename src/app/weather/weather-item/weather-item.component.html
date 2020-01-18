@@ -1,27 +1,30 @@
-<div class="btn-group" role="group" >
-  <button type="button" class="btn btn-primary" style="cursor: pointer" role="button" (click)="onSelect()">Add To Favorits
-  </button>
-  <button *ngIf="isFehrenhite" type="button"  class="btn btn-pill btn-primary"  (click)="swapTempUnits()" >℃</button>
-  <button *ngIf="!isFehrenhite" type="button" class="btn btn-pill btn-success" (click)="swapTempUnits()" >℉</button>
+<div class="row">
+  <div class="col-xs-5" style="margin-top: 50px;margin-left: 100px">
+  <div class="box" *ngIf="currentCity" style="border: 3px solid midnightblue;max-width: max-content;max-height: max-content" >
+    <mat-card-title>{{currentCity.cityName}}</mat-card-title>
+    <mat-card-subtitle>   {{currentCity.temperatureMetric}}{{F}}</mat-card-subtitle>
+    <mat-card-subtitle> {{currentCity.temperatureImperial}}{{C}}</mat-card-subtitle>
+    <mat-card-subtitle> {{currentCity.weatherCondition }}</mat-card-subtitle>
+    <mat-card-subtitle> <i [ngClass]="'wi ' + iconConvertions"></i></mat-card-subtitle>
+  </div>
+  </div>
+  <div class="col-xs-2"></div>
+  <div class="col-xs-2" style="border:3px solid #111111; text-wrap: normal;background-color: cadetblue;max-width: max-content;margin: auto; margin-top: 50px">
+    <i class="fa fa-heart" [ngClass]="toggle ? 'fa-heart' : 'fa-heart-o'" (click)="onSelect()"
+       style="color: red"></i>Add To Favorites
+  </div>
+
 </div>
-<div class="container" fxLayout="row" fxLayout.xs="row" fxLayoutGap="-4%"  fxLayoutAlign="center" style="margin-top: 20px">
-  <div class="container-item" *ngFor="let day of day ;let index = index" fxFlex="20%" fxFlexAlign="center" style="background-color: transparent">
-    <div *ngIf="isFehrenhite">
-      <mat-card class="child">
-        <mat-card-title >{{day}}</mat-card-title>
-        <mat-card-subtitle>{{'Min'}} / {{'Max'}}  </mat-card-subtitle>
-        <mat-card-subtitle>{{minF[index]}}{{F}}/
-          {{maxF[index]}}{{F}}</mat-card-subtitle>
-      </mat-card>
-    </div>
-    <div *ngIf="!isFehrenhite">
-      <mat-card class="child">
-        <mat-card-title>{{day}}</mat-card-title>
-        <mat-card-subtitle>{{'Min'}} / {{'Max'}}  </mat-card-subtitle>
-        <mat-card-subtitle>{{minC[index]}}{{C}}
-          /{{maxC[index]}}{{C}} </mat-card-subtitle>
-      </mat-card>
-    </div>
+<div class="container" fxLayout="row wrap" fxLayout.xs="col" fxLayoutAlign="center"
+     style="margin-top: 20px">
+  <div *ngFor="let day of day ;let index = index" fxFlex="20%" fxFlexAlign="center"
+       style="background-color: transparent">
+    <mat-card class="child">
+      <mat-card-title>{{day}}</mat-card-title>
+      <mat-card-subtitle>{{date[index].day + '/'}}{{date[index].month + '/'}}{{date[index].year.toString()[2]}}{{date[index].year.toString()[3]}}</mat-card-subtitle>
+      <mat-card-subtitle>{{minC[index]}}-{{maxC[index]}}{{C}} </mat-card-subtitle>
+      <mat-card-subtitle>{{minF[index]}}-{{maxF[index]}}{{F}}</mat-card-subtitle>
+    </mat-card>
   </div>
 </div>
 

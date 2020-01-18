@@ -1,5 +1,4 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {WeatherService} from '../weather/weather.service';
 
 @Component({
   selector: 'app-header',

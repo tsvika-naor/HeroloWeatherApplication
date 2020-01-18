@@ -1,5 +1,5 @@
 import * as WeatherActions from './weather.actions';
-import {WeatherItem} from '../weather-item/weather-item.interface';
+import {WeatherItem} from '../weather-item/weather-item.class';
 
 export function reducer(state: WeatherItem[] = [], action: WeatherActions.ACTIONS) {
 

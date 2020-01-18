@@ -1,34 +1,16 @@
 <div class="bg">
-<h3 style="text-align: center;font-family: Aharoni ">My Favorits Cities</h3>
-<div class="btn-group" role="group" style="margin-bottom: 25px">
-  <button class="btn btn-primary" (click)="removeallCities()" >RemoveAll
-  </button>
-  <button class="btn btn-primary" (click)="removeCity()" [disabled]="enableDelete" >Remove
-    City
-  </button>
-  <button *ngIf="isFehrenhite" type="button" class="btn btn-pill btn-primary" (click)="swapTempUnits()">℃</button>
-  <button *ngIf="!isFehrenhite" type="button" class="btn btn-pill btn-success" (click)="swapTempUnits()">℉</button>
-</div>
-<div class="container" fxLayout="row wrap" fxLayoutGap="2%" fxLayoutAlign="center">
-  <div *ngFor="let weather of weather$ | async ; let index = index" fxFlexAlign="center" fxLayout="no wrap" >
-    <div *ngIf="isFehrenhite">
-      <mat-card (click)="passIndex(index)" [ngStyle]="{'background-image':backgroundStyle(weather.weatherCondition)}">
+  <h3 style="text-align: center;font-family: Aharoni ">My Favorits Cities</h3>
+  <div class="container" fxLayout="row wrap" fxLayout.md="row wrap" fxLayout.sm="row wrap" fxLayout.xs="column">
+    <div *ngFor="let weather of weather$ | async ; let index = index" fxFlex="20%" fxFlexAlign="center" >
+      <mat-card class="child" (click)="passIndex(index)">
         <mat-card-title>{{weather.cityName}}</mat-card-title>
-        <mat-card-subtitle>{{weather.temperatureImperial}}{{F}}</mat-card-subtitle>
+        <mat-card-subtitle>{{weather.temperatureImperial}}{{C}}</mat-card-subtitle>
+        <mat-card-subtitle>{{weather.temperatureMetric}}{{F}}</mat-card-subtitle>
         <mat-card-subtitle>{{weather.weatherCondition}}</mat-card-subtitle>
+        <mat-card-subtitle><i [ngClass]="'wi ' + weather.icon"></i></mat-card-subtitle>
       </mat-card>
     </div>
 
-    <div *ngIf="!isFehrenhite" >
-      <mat-card (click)="passIndex(index)" [ngStyle]="{'background-image':backgroundStyle(weather.weatherCondition)}">
-        <mat-card-title>{{weather.cityName}}</mat-card-title>
-        <mat-card-subtitle>{{weather.temperatureMetric}}{{C}}</mat-card-subtitle>
-        <mat-card-subtitle>{{weather.weatherCondition}}</mat-card-subtitle>
-      </mat-card>
-    </div>
-  </div>
-</div>
-</div>
 
 
 

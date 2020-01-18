@@ -8,9 +8,8 @@ import {Component, OnInit} from '@angular/core';
 })
 export class WeatherComponent implements OnInit {
 
-  constructor() {
+  ngOnInit() {
+
   }
 
-  ngOnInit() {
-  }
 }

@@ -1,11 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {WeatherService} from '../weather.service';
 import {Observable} from 'rxjs';
-import {WeatherItem} from './weather-item.interface';
+import {WeatherItem} from './weather-item.class';
 import {Store} from '@ngrx/store';
 import {AppState} from '../../app.state';
 import * as WeatherActions from '../store/weather.actions';
-
+import {DateItem} from '../../shared/dateItem.class';
 
 @Component({
   selector: 'app-weather-item',
@@ -20,11 +20,10 @@ export class WeatherItemComponent implements OnInit {
   constructor(private weatherService: WeatherService, private store: Store<AppState>) {
 
   }
-  allow: boolean = true;
-  addedCities: string[] = [];
+  dispatch: boolean;
+  index:number;
   F: string = '℉';
   C: string = '℃';
-  isFehrenhite: boolean;
   cityName: string;
   temperatureImperial: number;
   temperatureMetric: number;
@@ -34,6 +33,12 @@ export class WeatherItemComponent implements OnInit {
   maxC: string[];
   minC: string[];
   day: string[];
+  toggle: boolean = false;
+  currentCity: WeatherItem;
+  iconConvertions: string;
+  date: DateItem[];
+
+
 
   ngOnInit() {
     this.day = this.weatherService.day;
@@ -41,32 +46,37 @@ export class WeatherItemComponent implements OnInit {
     this.minF = this.weatherService.minTempInF;
     this.maxC = this.weatherService.maxTempInC;
     this.minC = this.weatherService.minTempInC;
-  }
 
-  swapTempUnits() {
-    this.isFehrenhite = !this.isFehrenhite;
+    this.weatherService.citySelected.subscribe(res => {
+      this.iconConvertions = this.weatherService.getIcon(res.weatherCondition);
+      this.currentCity = new WeatherItem(res.cityName, res.temperatureImperial, res.temperatureMetric, res.weatherCondition, this.iconConvertions);
+    });
+    this.weatherService.toggleEmitter.subscribe(res => {
+      this.toggle = res;
+    });
+    this.weatherService.dateEmitter.subscribe(res => {
+      this.date = res;
+      console.log(this.date);
+    });
   }
 
   onSelect() {
-    this.allow = true;
-    this.cityName = this.weatherService.cityName;
-    this.temperatureImperial = this.weatherService.temperatureImperial;
-    this.temperatureMetric = this.weatherService.temperatureMetric;
-    this.weatherCondition = this.weatherService.weatherCondition;
-    for (let i = 0 ;i<this.addedCities.length;i++){
-      if(this.addedCities[i] === this.cityName) {
-        this.allow = false;
-        break;
-      }
+
+    this.toggle = !this.toggle;
+    this.dispatch = this.weatherService.savedCities(this.currentCity.cityName);
+
+    if(this.dispatch) {
+      this.store.dispatch(new WeatherActions.RemoveCity(this.weatherService.index));
     }
-    if(this.allow){
-      this.addedCities.push(this.cityName);
-    this.store.dispatch(new WeatherActions.AddCity({
-      cityName: this.cityName,
-      temperatureImperial: this.temperatureImperial,
-      temperatureMetric: this.temperatureMetric,
-      weatherCondition: this.weatherCondition
-    }));
-  }}
+    else {
+      this.store.dispatch(new WeatherActions.AddCity({
+        cityName: this.currentCity.cityName,
+        temperatureImperial:  this.currentCity.temperatureImperial,
+        temperatureMetric: this.currentCity.temperatureMetric,
+        weatherCondition: this.currentCity.weatherCondition,
+        icon: this.currentCity.icon
+      }));
+    }
+  }
 
 }
