@@ -143,7 +143,7 @@ export class WeatherService implements OnInit {
 
       this.toggleEmitter.next(this.toggle);
   }
-  static getIcon(icon){
+   getIcon(icon){
     switch (icon) {
       case 'Some clouds':
         return 'wi-cloudy';
