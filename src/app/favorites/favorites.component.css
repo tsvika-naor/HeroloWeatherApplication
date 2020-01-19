@@ -17,12 +17,17 @@
   margin-bottom: 5px;
 }
 .mat-card-title {
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 80%;
   text-align: center;
 }
 
 .mat-card-subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 80%;
   text-align: center;
 }
@@ -32,12 +37,17 @@
     text-wrap: none;
   }
   .mat-card-title {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 80%;
     text-align: center;
   }
 
   .mat-card-subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 80%;
     text-align: center;
   }
@@ -53,11 +63,17 @@
     padding: 20px;
   }
   .mat-card-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 70%;
     text-align: center;
   }
 
   .mat-card-subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 80%;
     text-align: center;
   }
@@ -74,12 +90,18 @@
   }
 
   .mat-card-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 60%;
     text-align: center;
 
   }
 
   .mat-card-subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size:70%;
     text-align: center;
   }
