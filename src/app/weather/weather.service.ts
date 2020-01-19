@@ -17,9 +17,9 @@ export class WeatherService implements OnInit {
   maxTempInC: string[] = [];
   day: string[] = [];
   index: number;
-  private cityArray: string[]=[];
-  date : DateItem[]=[];
-  date_:DateItem;
+  private cityArray: string[] = [];
+  date: DateItem[] = [];
+  date_: DateItem;
   temperatureImperial: number;
   temperatureMetric: number;
   weatherCondition: string;
@@ -80,13 +80,14 @@ export class WeatherService implements OnInit {
         }
       }
       epoch = epoch + 1;
-      if(epoch === 7)
+      if (epoch === 7) {
         epoch = 0;
+      }
     }
   }
 
   selectedCity() {
-    this.weatherItem = new WeatherItem(this.cityName, this.temperatureMetric, this.temperatureImperial, this.weatherCondition,this.getIcon(this.cityName));
+    this.weatherItem = new WeatherItem(this.cityName, this.temperatureMetric, this.temperatureImperial, this.weatherCondition, this.getIcon(this.cityName));
     this.citySelected.next(this.weatherItem); // emits to weather-item component.
 
   }
@@ -101,14 +102,15 @@ export class WeatherService implements OnInit {
       this.maxTempInC[i] = ((5 / 9) * (temperature.Maximum.Value - 32)).toFixed(0);
     }
   }
-  getDate(res){
 
-    for (let i=0 ; i<5 ; i++){
-      var date = new Date(res.DailyForecasts[i].EpochDate* 1000);
+  getDate(res) {
+
+    for (let i = 0; i < 5; i++) {
+      var date = new Date(res.DailyForecasts[i].EpochDate * 1000);
       let year = date.getFullYear();
       let day = date.getDate();
-      let month = date.getMonth() +1;//january is 0 feb is 1 so we add + 1
-      this.date[i] = new DateItem(day,month,year);
+      let month = date.getMonth() + 1;//january is 0 feb is 1 so we add + 1
+      this.date[i] = new DateItem(day, month, year);
       console.log(this.date[i]);
     }
     this.dateEmitter.next(this.date);
@@ -117,33 +119,37 @@ export class WeatherService implements OnInit {
   savedCities(city: string) {
     console.log(city);
     let state = true;
-    for (let i=0 ; i<this.cityArray.length; i++) {
-      if(this.cityArray[i] === city) {
+    for (let i = 0; i < this.cityArray.length; i++) {
+      if (this.cityArray[i] === city) {
         state = false;
-        this.cityArray.splice(i,1);
+        this.cityArray.splice(i, 1);
         this.index = i;
         return true;//remove from store
       }
     }
-    if(state) {
+    if (state) {
       this.cityArray.push(city);
-      return false // add to store
+      return false; // add to store
     }
 
   }
+
   getToggleState(city) {
     let state = false;
     for (let i = 0; i < this.cityArray.length; i++) {
       if (this.cityArray[i] === city) {
         state = true;
         this.toggle = true;
-      }}
-      if(!state)
-     this.toggle = false;
+      }
+    }
+    if (!state) {
+      this.toggle = false;
+    }
 
-      this.toggleEmitter.next(this.toggle);
+    this.toggleEmitter.next(this.toggle);
   }
-   getIcon(icon){
+
+  getIcon(icon) {
     switch (icon) {
       case 'Some clouds':
         return 'wi-cloudy';

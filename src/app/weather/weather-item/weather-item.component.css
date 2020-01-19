@@ -1,11 +1,11 @@
-.background
-{
-  padding:0;
-  margin:0;
+.background {
+  padding: 0;
+  margin: 0;
   background: rebeccapurple;
   background: url('https://images.unsplash.com/photo-1528872042734-8f50f9d3c59b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
   background-size: 100% 100%;
 }
+
 .box {
 
   background-color: transparent;
@@ -13,9 +13,10 @@
   padding: 20px 40px;
 
 }
+
 .selectedCity {
-  margin-top:50px;
-  margin-left:103px;
+  margin-top: 50px;
+  margin-left: 103px;
   border: transparent;
 }
 
@@ -24,6 +25,7 @@
   width: 100%;
 
 }
+
 .mat-card-title {
 
   font-size: 2rem;
@@ -36,10 +38,11 @@
   justify-content: center;
   align-items: center;
   font-size: 1.75rem;
-  text-align: center ;
-  transform: translate(0, 80%) ;
+  text-align: center;
+  transform: translate(0, 80%);
 }
-.mat-card{
+
+.mat-card {
   margin-bottom: 20px;
   border-radius: 25px;
   font-weight: bold;
@@ -89,18 +92,22 @@
     transform: translateX(-20px);
     margin: auto;
   }
+
   .box {
     width: 70%;
     height: 70%;
     text-align: center;
   }
-  .col-sm-2{
+
+  .col-sm-2 {
     font-size: 80%;
   }
-  #selectedCity{
+
+  #selectedCity {
     width: 80%;
     height: 80%;
   }
+
   .mat-card-title {
     display: flex;
     justify-content: center;
@@ -116,6 +123,7 @@
     font-size: 70%;
     text-align: center;
   }
+
   .mat-card {
     padding: 20px;
     width: 80%;
@@ -123,19 +131,23 @@
   }
 
 }
-@media only screen and (max-width: 620px) {
-.container{
-transform: translateX(-20px);
-}
-  .box {
 
+@media only screen and (max-width: 620px) {
+  .container {
+    transform: translateX(-20px);
+  }
+
+  .box {
     width: 50%;
     height: 50%;
     text-align: center;
   }
-.col-xs-2,#text {
-  font-size: 60%;
-}
+
+  .col-xs-2 {
+    transform: translateX(-20px);
+    font-size: 60%;
+  }
+
 
   .mat-card-title {
     display: flex;
@@ -152,6 +164,7 @@ transform: translateX(-20px);
     font-size: 60%;
     text-align: center;
   }
+
   .mat-card {
     padding: 20px;
     width: 80%;

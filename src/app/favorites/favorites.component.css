@@ -1,21 +1,12 @@
-.bg {
-  /*margin-top: 20px;*/
-  /*position: relative;*/
-  /*width: 100%;*/
-  /*height: 80vh;*/
-  /*background-size: cover;*/
-  /*text-align: center;*/
-  /*border: 3px solid black;*/
-}
-
 .mat-card {
   background: royalblue;
   margin-top: 5px;
   width: 80%;
-  height:100%;
+  height: 100%;
   border: 3px solid black;
   margin-bottom: 5px;
 }
+
 .mat-card-title {
   display: flex;
   justify-content: center;
@@ -31,11 +22,13 @@
   font-size: 80%;
   text-align: center;
 }
+
 @media only screen and (max-width: 1200px) {
   .child {
     width: 100%;
     text-wrap: none;
   }
+
   .mat-card-title {
     display: flex;
     justify-content: center;
@@ -51,10 +44,12 @@
     font-size: 80%;
     text-align: center;
   }
-  .container{
+
+  .container {
     flex-direction: row;
   }
 }
+
 @media only screen and (max-width: 768px) {
 
   .child {
@@ -62,6 +57,7 @@
     text-align: center;
     padding: 20px;
   }
+
   .mat-card-title {
     display: flex;
     justify-content: center;
@@ -78,6 +74,7 @@
     text-align: center;
   }
 }
+
 @media only screen and (max-width: 600px) {
 
   .child {
@@ -86,7 +83,6 @@
     text-align: center;
     text-wrap: none;
     padding: 20px;
-
   }
 
   .mat-card-title {
@@ -95,17 +91,17 @@
     align-items: center;
     font-size: 60%;
     text-align: center;
-
   }
 
   .mat-card-subtitle {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size:70%;
+    font-size: 70%;
     text-align: center;
   }
-  .bg{
+
+  .bg {
     border: none;
   }
 }

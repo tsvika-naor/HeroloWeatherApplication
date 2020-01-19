@@ -37,39 +37,22 @@
 
 @media screen and (max-width: 500px) {
   .header {
-    /*float: none;*/
     border: transparent;
   }
 
   .header a {
-    /*float: none;*/
-    /*text-align: center;*/
     font-size: 10px;
   }
 
-  .header-right {text-align: center;
-    /*float: none;*/
-    /*display: block */
+  .header-right {
     text-align: center;
-
-
   }
-  .header-right-item{
+
+  .header-right-item {
     font-size: 10px
   }
-  /*.container {*/
-  /*  background: #fff;*/
-  /*  display: flex;*/
-  /*  align-items: center;*/
-  /*  justify-content: center;*/
-  /*  flex-direction: column;*/
-  /*  overflow: hidden;*/
-  /*  text-align: center;*/
-  /*  width: 70px;*/
-  /*  height: 50px;*/
-  /*}*/
 
-  .container  {
+  .container {
     color: #111;
     /*margin: 0 0 25px;*/
     position: relative;

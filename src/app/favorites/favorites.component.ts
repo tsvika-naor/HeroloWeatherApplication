@@ -4,7 +4,6 @@ import {Observable} from 'rxjs';
 import {WeatherItem} from '../weather/weather-item/weather-item.class';
 import {Store} from '@ngrx/store';
 import {AppState} from '../app.state';
-import * as WeatherActions from '../weather/store/weather.actions';
 
 
 @Component({
@@ -16,7 +15,6 @@ export class FavoritesComponent implements OnInit {
   enableDelete: boolean = true;
   weather$: Observable<WeatherItem[]>;
   index: number;
-  isFehrenhite: boolean = true;
   F: string = '℉';
   C: string = '℃';
 
@@ -25,29 +23,12 @@ export class FavoritesComponent implements OnInit {
   }
 
   ngOnInit() {
-
-  }
-
-  removeCity() {
-    this.store.dispatch(new WeatherActions.RemoveCity(this.index));
-    this.enableDelete = true;
-  }
-
-  removeallCities() {
-    for (let i = 0; i < 100; i++) {
-      this.store.dispatch(new WeatherActions.RemoveCity(0));
-    }
   }
 
   passIndex(index) {
-    // console.log(index);
     this.index = index;
     this.enableDelete = false;
   }
 
-  swapTempUnits() {
-
-    this.isFehrenhite = !this.isFehrenhite;
-  }
 }
 

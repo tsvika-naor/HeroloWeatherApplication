@@ -20,8 +20,9 @@ export class WeatherItemComponent implements OnInit {
   constructor(private weatherService: WeatherService, private store: Store<AppState>) {
 
   }
+
   dispatch: boolean;
-  index:number;
+  index: number;
   F: string = '℉';
   C: string = '℃';
   cityName: string;
@@ -37,7 +38,6 @@ export class WeatherItemComponent implements OnInit {
   currentCity: WeatherItem;
   iconConvertions: string;
   date: DateItem[];
-
 
 
   ngOnInit() {
@@ -65,13 +65,12 @@ export class WeatherItemComponent implements OnInit {
     this.toggle = !this.toggle;
     this.dispatch = this.weatherService.savedCities(this.currentCity.cityName);
 
-    if(this.dispatch) {
+    if (this.dispatch) {
       this.store.dispatch(new WeatherActions.RemoveCity(this.weatherService.index));
-    }
-    else {
+    } else {
       this.store.dispatch(new WeatherActions.AddCity({
         cityName: this.currentCity.cityName,
-        temperatureImperial:  this.currentCity.temperatureImperial,
+        temperatureImperial: this.currentCity.temperatureImperial,
         temperatureMetric: this.currentCity.temperatureMetric,
         weatherCondition: this.currentCity.weatherCondition,
         icon: this.currentCity.icon

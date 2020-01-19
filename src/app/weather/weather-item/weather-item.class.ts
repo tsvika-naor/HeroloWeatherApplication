@@ -5,7 +5,7 @@ export class WeatherItem {
   weatherCondition: string;
   icon: string;
 
-  constructor(cityName, temperatureImperial, temperatureMetric  ,weatherCondition, icon){
+  constructor(cityName, temperatureImperial, temperatureMetric, weatherCondition, icon) {
     this.cityName = cityName;
     this.temperatureImperial = temperatureImperial;
     this.temperatureMetric = temperatureMetric;

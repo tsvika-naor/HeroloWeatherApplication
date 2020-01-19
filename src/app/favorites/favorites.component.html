@@ -1,7 +1,7 @@
 <div class="bg">
   <h3 style="text-align: center;font-family: Aharoni ">My Favorits Cities</h3>
   <div class="container" fxLayout="row wrap" fxLayout.md="row wrap" fxLayout.sm="row wrap" fxLayout.xs="column">
-    <div *ngFor="let weather of weather$ | async ; let index = index" fxFlex="20%" fxFlexAlign="center" >
+    <div *ngFor="let weather of weather$ | async ; let index = index" fxFlex="20%" fxFlexAlign="center">
       <mat-card class="child" (click)="passIndex(index)">
         <mat-card-title>{{weather.cityName}}</mat-card-title>
         <mat-card-subtitle>{{weather.temperatureImperial}}{{C}}</mat-card-subtitle>
@@ -11,9 +11,4 @@
       </mat-card>
     </div>
   </div>
-
-
-
-
-
-
+</div>
