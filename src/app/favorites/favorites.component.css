@@ -5,6 +5,8 @@
   height: 100%;
   border: 3px solid black;
   margin-bottom: 5px;
+  flex-grow: 1;
+  flex-basis: 0;
 }
 .mat-card-title {
   display: flex;
@@ -21,12 +23,18 @@
   font-size: 80%;
   text-align: center;
 }
-
+mat-card-content{
+  flex-grow: 1;
+  flex-basis: 0;
+}
 @media only screen and (max-width: 1200px) {
   .child {
     width: 100%;
     text-wrap: none;
+    flex-grow: 1;
+    flex-basis: 0;
   }
+
   .mat-card-title {
     display: flex;
     justify-content: center;
@@ -46,69 +54,83 @@
   .container {
     flex-direction: row;
   }
-}
 
-@media only screen and (max-width: 768px) {
-
-  .child {
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-  }
-  mat-card-content{
+  mat-card-content {
     flex-grow: 1;
-  }
-  .mat-card-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 70%;
-    text-align: center;
+    flex-basis: 0;
   }
 
-  .mat-card-subtitle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 80%;
-    text-align: center;
-  }
-}
+  @media only screen and (max-width: 768px) {
 
-@media only screen and (max-width: 600px) {
-  mat-card-content{
-    flex-grow: 1;
-  }
-  .child {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    width: 100%;
-    text-align: center;
-    text-wrap: none;
-    max-width: fit-content;
-   
-  }
+    .child {
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+      flex-grow: 1;
+      flex-basis: 0;
+    }
 
-  .mat-card-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 60%;
-    text-align: center;
-  }
+    mat-card-content {
+      flex-grow: 1;
+      flex-basis: 0;
+    }
 
-  .mat-card-subtitle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 70%;
-    text-align: center;
+    .mat-card-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 70%;
+      text-align: center;
+    }
+
+    .mat-card-subtitle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 80%;
+      text-align: center;
+    }
   }
 
-  .bg {
-    border: none;
+  @media only screen and (max-width: 600px) {
+    mat-card-content {
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+
+    .child {
+      display: block;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      width: 100%;
+      text-align: center;
+      text-wrap: none;
+      max-width: fit-content;
+      flex-grow: 1;
+      flex-basis: 0;
+
+    }
+
+    .mat-card-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 60%;
+      text-align: center;
+    }
+
+    .mat-card-subtitle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 70%;
+      text-align: center;
+    }
+
+    .bg {
+      border: none;
+    }
   }
 }
 
