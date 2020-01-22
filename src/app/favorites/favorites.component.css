@@ -33,6 +33,7 @@ mat-card-content{
     text-wrap: none;
     flex-grow: 1;
     flex-basis: 0;
+    min-width: 120px;
   }
 
   .mat-card-title {
@@ -66,17 +67,14 @@ mat-card-content{
       width: 100%;
       text-align: center;
       padding: 20px;
+      min-width: 120px;
       flex-grow: 1;
       flex-basis: 0;
     }
 
-    mat-card-content {
-      flex-grow: 1;
-      flex-basis: 0;
-    }
 
     .mat-card-title {
-      display: flex;
+
       justify-content: center;
       align-items: center;
       font-size: 70%;
@@ -84,7 +82,6 @@ mat-card-content{
     }
 
     .mat-card-subtitle {
-      display: flex;
       justify-content: center;
       align-items: center;
       font-size: 80%;
@@ -95,20 +92,20 @@ mat-card-content{
   @media only screen and (max-width: 600px) {
 
     .child {
-      display: block;
+
       justify-content: center;
       align-items: center;
       margin: auto;
       width: 100%;
       text-align: center;
       text-wrap: none;
-      max-width: fit-content;
+      min-width: 120px;
       /*transform: rotate(270deg);*/
     }
 
     .mat-card-title {
       /*transform: rotate(90deg);*/
-      display: flex;
+      /*display: flex;*/
       justify-content: center;
       align-items: center;
       font-size: 60%;
@@ -117,7 +114,7 @@ mat-card-content{
 
     .mat-card-subtitle {
       /*transform: rotate(90deg);*/
-      display: flex;
+      /*display: flex;*/
       justify-content: center;
       align-items: center;
       font-size: 70%;
