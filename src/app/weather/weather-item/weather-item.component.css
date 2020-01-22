@@ -1,8 +1,5 @@
 .background {
-  padding: 0;
-  margin: 0;
-  background: rebeccapurple;
-  background: url('https://images2.minutemediacdn.com/image/upload/c_crop,h_1192,w_2121,x_0,y_111/f_auto,q_auto,w_1100/v1554702738/shape/mentalfloss/49786-istock_0.jpg');
+  background-image: url('https://images2.minutemediacdn.com/image/upload/c_crop,h_1192,w_2121,x_0,y_111/f_auto,q_auto,w_1100/v1554702738/shape/mentalfloss/49786-istock_0.jpg');
   background-size: 100% 100%;
 }
 
@@ -68,7 +65,6 @@ transform: translateX(40px);
   }
   .box {
     transform: translateX(-13px);
-
     width: 80%;
     height: 80%;
   }
@@ -162,6 +158,7 @@ transform: translateX(40px);
   }
 
   .box {
+    border-radius: 0px;
    transform: translateX(-25px);
     width: 50%;
     height: 50%;
@@ -196,7 +193,7 @@ transform: translateX(40px);
   }
 
   .mat-card {
-
+    border-radius: 0px;
     padding: 20px;
     width: 80%;
     height: 80%;
