@@ -2,13 +2,11 @@ import {Injectable, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable, Subject} from 'rxjs';
 import {WeatherItem} from './weather-item/weather-item.class';
-import {DateItem} from '../shared/dateItem.class';
 
 @Injectable()
 export class WeatherService implements OnInit {
   citySelected = new Subject<WeatherItem>();
   toggleEmitter = new Subject<boolean>();
-  dateEmitter = new Subject<DateItem[]>();
   toggle: boolean;
   weatherItem: WeatherItem;
   minTempInF: string[] = [];
@@ -18,8 +16,8 @@ export class WeatherService implements OnInit {
   day: string[] = [];
   index: number;
   private cityArray: string[] = [];
-  date: DateItem[] = [];
-  date_: DateItem;
+  date: Date[] = [];
+
   temperatureImperial: number;
   temperatureMetric: number;
   weatherCondition: string;
@@ -106,14 +104,9 @@ export class WeatherService implements OnInit {
   getDate(res) {
 
     for (let i = 0; i < 5; i++) {
-      var date = new Date(res.DailyForecasts[i].EpochDate * 1000);
-      let year = date.getFullYear();
-      let day = date.getDate();
-      let month = date.getMonth() + 1;//january is 0 feb is 1 so we add + 1
-      this.date[i] = new DateItem(day, month, year);
+      this.date[i] = new Date(res.DailyForecasts[i].EpochDate * 1000);
       console.log(this.date[i]);
     }
-    this.dateEmitter.next(this.date);
   }
 
   savedCities(city: string) {

@@ -2,8 +2,8 @@
   <div class="row">
     <div class="center" style=" text-align: center">
       <mat-form-field>
-        <input matInput type="text" (keyup)="onKeypress($event)" placeholder="enter city name" class="form-control"
-               id="query" value="Tel-Aviv" style="margin-bottom: 5px">
+        <label for="query"><input type="text" (keyup)="onKeypress($event)" placeholder="enter city name" class="form-control"
+                                          id="query" value="Tel-Aviv" style="margin-bottom: 5px"></label>
         <mat-select class='form-control' name="search" [(ngModel)]="selectedOption" style="cursor: pointer"
                     (selectionChange)="onSelect()" [ngStyle]="{'background-color':'rebeccapurple'}">
           <mat-option *ngFor="let item of weatherItem" [value]="item" [ngStyle]="{'background-color':'rebeccapurple'}">

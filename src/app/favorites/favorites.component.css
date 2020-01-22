@@ -78,11 +78,14 @@
 @media only screen and (max-width: 600px) {
 
   .child {
+    display: block;
+    justify-content: center;
+    align-items: center;
     margin: auto;
     width: 100%;
     text-align: center;
     text-wrap: none;
-    padding: 20px;
+   
   }
 
   .mat-card-title {

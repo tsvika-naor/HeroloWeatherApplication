@@ -20,11 +20,11 @@
   </div>
   <div class="container" fxLayout="row wrap" fxLayout.xs="col" fxLayoutAlign="center"
        style="margin-top: 20px">
-    <div *ngFor="let day of day ;let index = index" fxFlex="20%" fxFlexAlign="center"
+    <div *ngFor="let d of date ;let index = index" fxFlex="20%" fxFlexAlign="center"
          style="background-color: transparent">
       <mat-card class="child">
-        <mat-card-title>{{day}}</mat-card-title>
-        <mat-card-subtitle>{{date[index].day + '/'}}{{date[index].month + '/'}}{{date[index].year.toString()[2]}}{{date[index].year.toString()[3]}}</mat-card-subtitle>
+        <mat-card-title>{{d | date: 'EEEE' }}</mat-card-title>
+        <mat-card-subtitle>{{d | date: 'shortDate'}}</mat-card-subtitle>
         <mat-card-subtitle>{{minC[index]}}-{{maxC[index]}}{{C}} </mat-card-subtitle>
         <mat-card-subtitle>{{minF[index]}}-{{maxF[index]}}{{F}}</mat-card-subtitle>
       </mat-card>

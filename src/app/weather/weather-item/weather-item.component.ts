@@ -5,7 +5,6 @@ import {WeatherItem} from './weather-item.class';
 import {Store} from '@ngrx/store';
 import {AppState} from '../../app.state';
 import * as WeatherActions from '../store/weather.actions';
-import {DateItem} from '../../shared/dateItem.class';
 
 @Component({
   selector: 'app-weather-item',
@@ -37,11 +36,11 @@ export class WeatherItemComponent implements OnInit {
   toggle: boolean = false;
   currentCity: WeatherItem;
   iconConvertions: string;
-  date: DateItem[];
+  date: Date[];
 
 
   ngOnInit() {
-    this.day = this.weatherService.day;
+    this.date = this.weatherService.date;
     this.maxF = this.weatherService.maxTempInF;
     this.minF = this.weatherService.minTempInF;
     this.maxC = this.weatherService.maxTempInC;
@@ -53,10 +52,6 @@ export class WeatherItemComponent implements OnInit {
     });
     this.weatherService.toggleEmitter.subscribe(res => {
       this.toggle = res;
-    });
-    this.weatherService.dateEmitter.subscribe(res => {
-      this.date = res;
-      console.log(this.date);
     });
   }
 
