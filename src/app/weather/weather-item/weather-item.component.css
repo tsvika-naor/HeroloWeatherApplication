@@ -54,9 +54,6 @@ transform: translateX(40px);
 
 
 @media only screen and (max-width: 1000px) {
-  .container {
-    margin: auto;
-  }
 
   .box {
     width: 80%;
@@ -88,10 +85,7 @@ transform: translateX(40px);
 
 
 @media only screen and (max-width: 768px) {
-  .container {
-    transform: translateX(-20px);
-    margin: auto;
-  }
+
 
   .box {
     width: 70%;
