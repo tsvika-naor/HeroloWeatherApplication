@@ -6,7 +6,6 @@
   border: 3px solid black;
   margin-bottom: 5px;
 }
-
 .mat-card-title {
   display: flex;
   justify-content: center;
@@ -28,7 +27,6 @@
     width: 100%;
     text-wrap: none;
   }
-
   .mat-card-title {
     display: flex;
     justify-content: center;
@@ -57,7 +55,9 @@
     text-align: center;
     padding: 20px;
   }
-
+  mat-card-content{
+    flex-grow: 1;
+  }
   .mat-card-title {
     display: flex;
     justify-content: center;
@@ -76,7 +76,9 @@
 }
 
 @media only screen and (max-width: 600px) {
-
+  mat-card-content{
+    flex-grow: 1;
+  }
   .child {
     display: block;
     justify-content: center;
@@ -85,6 +87,7 @@
     width: 100%;
     text-align: center;
     text-wrap: none;
+    max-width: fit-content;
    
   }
 
