@@ -134,20 +134,24 @@ transform: translateX(40px);
 
 @media only screen and (max-width: 620px) {
   .container {
-    transform: translateX(-20px);
   }
 
   .box {
+   transform: translateX(-25px);
+    border-radius: 0px;
     width: 50%;
     height: 50%;
     text-align: center;
   }
 
-  .col-xs-2 {
-    transform: translateX(-20px);
+  .col-xs-2,#text {
+    /*transform: translateX(-20px);*/
+
     font-size: 60%;
   }
-
+  #text {
+    border-radius: 0px;
+  }
 
   .mat-card-title {
     display: flex;
@@ -166,6 +170,7 @@ transform: translateX(40px);
   }
 
   .mat-card {
+    border-radius: 0px;
     padding: 20px;
     width: 80%;
     height: 80%;
