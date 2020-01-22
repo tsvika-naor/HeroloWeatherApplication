@@ -190,6 +190,8 @@ export class WeatherService implements OnInit {
         return 'wi-fog';
       case 'Light snow':
         return 'wi-snow';
+      case 'Moderate rain':
+        return 'wi-rain';
     }
   }
 
