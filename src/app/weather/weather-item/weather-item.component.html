@@ -1,8 +1,8 @@
 <div class="background">
   <div class="row">
-    <div class="col-xs-5" style="margin-top: 50px;margin-left: 100px">
+    <div class="col-xs-5">
       <div class="box" *ngIf="currentCity"
-           style="border: 3px solid midnightblue;max-width: max-content;max-height: max-content">
+           style="max-width: max-content;max-height: max-content;border:2px solid black">
         <mat-card-title>{{currentCity.cityName}}</mat-card-title>
         <mat-card-subtitle>   {{currentCity.temperatureMetric}}{{F}}</mat-card-subtitle>
         <mat-card-subtitle> {{currentCity.temperatureImperial}}{{C}}</mat-card-subtitle>
