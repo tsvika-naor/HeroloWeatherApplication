@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-xs-5">
       <div class="box" *ngIf="currentCity"
-           style="max-width: max-content;max-height: max-content;border:2px solid black">
+           style="max-width: max-content;max-height: max-content; margin-left: 50px;border: 1px solid black;margin-top: 20px" >
         <mat-card-title>{{currentCity.cityName}}</mat-card-title>
         <mat-card-subtitle>   {{currentCity.temperatureMetric}}{{F}}</mat-card-subtitle>
         <mat-card-subtitle> {{currentCity.temperatureImperial}}{{C}}</mat-card-subtitle>
@@ -10,9 +10,9 @@
         <mat-card-subtitle><i [ngClass]="'wi ' + iconConvertions"></i></mat-card-subtitle>
       </div>
     </div>
-    <div class="col-xs-2"></div>
+    <div class="col-xs-4"></div>
     <div class="col-xs-2"
-         style="border:3px solid #111111; text-wrap: normal;background-color: cadetblue;max-width: max-content;margin: auto; margin-top: 50px">
+         style="border:1px solid #111111; text-wrap: normal;max-width: max-content; margin-top: 20px">
       <i class="fa fa-heart" [ngClass]="toggle ? 'fa-heart' : 'fa-heart-o'" (click)="onSelect()"
          style="color: red"></i>Add To Favorites
     </div>

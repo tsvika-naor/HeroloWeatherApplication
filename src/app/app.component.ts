@@ -11,4 +11,7 @@ export class AppComponent {
   getColor(event) {
     this.color = event;
   }
+  getColors(){
+
+  }
 }

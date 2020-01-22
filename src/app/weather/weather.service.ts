@@ -105,12 +105,10 @@ export class WeatherService implements OnInit {
 
     for (let i = 0; i < 5; i++) {
       this.date[i] = new Date(res.DailyForecasts[i].EpochDate * 1000);
-      console.log(this.date[i]);
     }
   }
 
   savedCities(city: string) {
-    console.log(city);
     let state = true;
     for (let i = 0; i < this.cityArray.length; i++) {
       if (this.cityArray[i] === city) {
