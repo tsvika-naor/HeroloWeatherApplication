@@ -93,10 +93,6 @@ mat-card-content{
   }
 
   @media only screen and (max-width: 600px) {
-    mat-card-content {
-      flex-grow: 1;
-      flex-basis: 0;
-    }
 
     .child {
       display: block;
@@ -107,12 +103,11 @@ mat-card-content{
       text-align: center;
       text-wrap: none;
       max-width: fit-content;
-      flex-grow: 1;
-      flex-basis: 0;
-
+      /*transform: rotate(270deg);*/
     }
 
     .mat-card-title {
+      /*transform: rotate(90deg);*/
       display: flex;
       justify-content: center;
       align-items: center;
@@ -121,13 +116,16 @@ mat-card-content{
     }
 
     .mat-card-subtitle {
+      /*transform: rotate(90deg);*/
       display: flex;
       justify-content: center;
       align-items: center;
       font-size: 70%;
       text-align: center;
     }
-
+    .mat-card-actions, .mat-card-content{
+      padding: 10px;
+    }
     .bg {
       border: none;
     }

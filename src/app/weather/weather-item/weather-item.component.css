@@ -61,7 +61,7 @@ transform: translateX(40px);
   text-align: center;
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1200px) {
   .container {
     transform: translateX(-13px);
   }
