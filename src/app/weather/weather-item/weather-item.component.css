@@ -43,6 +43,7 @@ transform: translateX(40px);
 }
 
 .mat-card {
+  box-shadow: 5px 5px midnightblue;
   margin-bottom: 20px;
   border-radius: 25px;
   font-weight: bold;
@@ -162,7 +163,6 @@ transform: translateX(40px);
 
   .box {
    transform: translateX(-25px);
-    border-radius: 0px;
     width: 50%;
     height: 50%;
     text-align: center;
@@ -196,7 +196,7 @@ transform: translateX(40px);
   }
 
   .mat-card {
-    border-radius: 0px;
+
     padding: 20px;
     width: 80%;
     height: 80%;
