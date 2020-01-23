@@ -1,6 +1,6 @@
 <div class="bg">
   <h3 style="text-align: center;font-family: Aharoni ">My Favorits Cities</h3>
-  <div class="container" fxLayoutAlign.xl="space-evenly" fxLayoutAlign.lg="space-evenly" fxLayoutAlign.md="space-evenly" fxLayoutAlign.sm="space-evenly" fxLayoutAlign.xs="space-evenly" fxLayout.xl="row wrap"  fxLayout.lg="row wrap" fxLayout.md="column" fxLayout.sm="column" fxLayout.xs="column">
+  <div class="container" fxLayoutAlign.xl="space-evenly" fxLayoutAlign.lg="space-evenly" fxLayoutAlign.md="space-evenly" fxLayoutAlign.sm="space-evenly stretch" fxLayoutAlign.xs="space-evenly " fxLayout.xl="row wrap"  fxLayout.lg="row wrap" fxLayout.md="column" fxLayout.sm="column" fxLayout.xs="column">
     <div *ngFor="let weather of weather$ | async ; let index = index" fxFlex="20%" fxFlexAlign="center">
       <mat-card class="child" (click)="passIndex(index)">
         <mat-card-title>{{weather.cityName}}</mat-card-title>
