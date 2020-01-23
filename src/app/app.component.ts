@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
     this.color = event;
     let tempColor = 'rgb(0,70,130)';
     if (this.color === false) {
-      tempColor = 'lightslategrey';
+      tempColor = 'rgb(71, 99, 148)';
     }
     this.renderer.setStyle(document.body, 'backgroundColor', tempColor);
   }
