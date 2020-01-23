@@ -62,7 +62,6 @@ mat-card-content{
   }
 
   @media only screen and (max-width: 768px) {
-
     .child {
       width: 100%;
       text-align: center;
@@ -74,7 +73,6 @@ mat-card-content{
 
 
     .mat-card-title {
-
       justify-content: center;
       align-items: center;
       font-size: 70%;
@@ -92,18 +90,13 @@ mat-card-content{
   @media only screen and (max-width: 600px) {
 
     .child {
-
       justify-content: center;
       align-items: center;
       text-align: center;
       text-wrap: none;
-      /*min-width: 120px;*/
-      /*transform: rotate(270deg);*/
     }
 
     .mat-card-title {
-      /*transform: rotate(90deg);*/
-      /*display: flex;*/
       justify-content: center;
       align-items: center;
       font-size: 60%;
@@ -111,8 +104,6 @@ mat-card-content{
     }
 
     .mat-card-subtitle {
-      /*transform: rotate(90deg);*/
-      /*display: flex;*/
       justify-content: center;
       align-items: center;
       font-size: 70%;
