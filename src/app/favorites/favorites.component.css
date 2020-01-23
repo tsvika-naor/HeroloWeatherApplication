@@ -33,7 +33,6 @@ mat-card-content{
     text-wrap: none;
     flex-grow: 1;
     flex-basis: 0;
-    min-width: 120px;
   }
 
   .mat-card-title {
