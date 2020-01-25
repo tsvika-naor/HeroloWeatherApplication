@@ -1,1 +1,6 @@
 
+@media only screen and (max-height: 500px) {
+  .bg {
+  background-color: lightseagreen;
+  }
+}

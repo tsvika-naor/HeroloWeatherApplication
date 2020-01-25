@@ -14,15 +14,15 @@ export class AppComponent implements OnInit {
 
   getColor(event) {
     this.color = event;
-    let tempColor = 'rgb(0,70,130)';
+    let tempColor = 'rgb(71, 99, 148)';
     if (this.color === false) {
-      tempColor = 'rgb(71, 99, 148)';
+      tempColor = 'rgb(0,70,130)';
     }
     this.renderer.setStyle(document.body, 'backgroundColor', tempColor);
   }
 
   ngOnInit(): void {
-    this.renderer.setStyle(document.body, 'backgroundColor', 'rgb(0,70,130)');
+    this.renderer.setStyle(document.body, 'backgroundColor', 'rgb(71, 99, 148)');
 
   }
 }

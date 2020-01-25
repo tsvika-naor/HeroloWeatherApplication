@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {WeatherService} from '../weather/weather.service';
+import {throwError} from 'rxjs';
 
 
 @Component({
@@ -27,7 +28,7 @@ export class SearchComponent implements OnInit {
         this.onSelect();
       },
       error1 => {
-        throw new Error('your error is:' + error1);
+        throwError(error1);
       });
 
   }
@@ -58,14 +59,14 @@ export class SearchComponent implements OnInit {
         this.weatherService.temperatureMetric = res[0].Temperature.Metric.Value.toFixed(0);//C
         this.weatherService.selectedCity();
       }, error1 => {
-        throw new Error('your error is:' + error1);
+          throwError(error1);
       });
       this.weatherService.get5DaysWeatherCast(this.key).subscribe(res => {
         this.weatherService.set5Days(JSON.parse(JSON.stringify(new Date((res.DailyForecasts[0]).EpochDate * 1000).getMonth())));
         this.weatherService.setTemp(res);
         this.weatherService.getDate(res);
-      }, err => {
-        throw new Error('your error is:' + err);
+      }, error1 => {
+        throwError(error1);
       });
     }
 }
