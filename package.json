@@ -2,7 +2,8 @@
   "name": "herolo-weather-app",
   "version": "0.0.0",
   "engines": {
-    "node": "13.10.1"
+    "node": "13.10.1",
+    "npm": "6.14.3"
   },
   "scripts": {
     "ng": "ng",
