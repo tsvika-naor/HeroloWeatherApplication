@@ -8,7 +8,7 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "build": "ng build",
+    "build": "webpack",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -73,5 +73,17 @@
   },
   "resolutions": {
     "@babel/preset-env": "7.9.0"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsvika-naor/HeroloWeatherApplication.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tsvika-naor/HeroloWeatherApplication/issues"
+  },
+  "homepage": "https://github.com/tsvika-naor/HeroloWeatherApplication#readme"
 }
