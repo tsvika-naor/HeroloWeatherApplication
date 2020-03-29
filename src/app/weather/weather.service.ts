@@ -22,9 +22,8 @@ export class WeatherService implements OnInit {
   temperatureMetric: number;
   weatherCondition: string;
   cityName: string = '';
-  // private Key1 ='oNdnipNwzT4GJw8IJ1OnpJsQh1G0lgYG';
-  //private KEY2 = 'bKpCXKwVNJLAhn5ZZmuAeXzvfag844K6';
-  private KEY = 'mMSQmRbYAYUtJnC6jAEvJiFRG8lP9YAN';
+  // private KEY = '32xGGM8xv9bf88LPVMZ94YJEYpGGjxSq';
+  private KEY = 'iLP1rRPPFtdWQcNu4oRexvnGzmZ3cWem';
   private autocomplete = 'https://dataservice.accuweather.com/locations/v1/cities/autocomplete';
   private currentConditions = 'https://dataservice.accuweather.com/currentconditions/v1/';
   private fiveDaysWeatherCast = 'https://dataservice.accuweather.com/forecasts/v1/daily/5day/';

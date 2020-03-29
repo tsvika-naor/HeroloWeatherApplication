@@ -2,11 +2,11 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-module.exports = {
-  entry: {
-    app: './src/app.module.ts'
-  }
-}
+// module.exports = {
+//   entry: {
+//     app: './src/app.module.ts'
+//   }
+// }
 // Serve static files....
 app.use(express.static(__dirname + '/dist/HeroloWeatherApp'));
 
