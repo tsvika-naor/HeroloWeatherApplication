@@ -10,22 +10,13 @@ import { WeatherComponent } from './weather/weather.component';
 import {HttpClientModule} from '@angular/common/http';
 import {WeatherService} from './weather/weather.service';
 import {FormsModule} from '@angular/forms';
-import {
-  MatFormFieldModule,
-  MatInputModule,
-  MatRadioModule,
-  MatOptionModule,
-  MatSelectModule,
-  MatCardModule,
-  MatToolbarModule,
-  MatGridListModule,
-  MatDividerModule,
-  MatIconModule
-} from '@angular/material';
+import {MatRadioModule} from '@angular/material/radio'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { WeatherItemComponent } from './weather/weather-item/weather-item.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {MatChipsModule} from '@angular/material';
+import {MatChipsModule, MatSelectModule, MatFormFieldModule, MatInputModule,
+   MatOptionModule, MatCardModule, MatToolbarModule, MatGridListModule,
+    MatDividerModule, MatIconModule} from '@angular/material';
 import {StoreModule} from '@ngrx/store';
 import {reducer} from './weather/store/weather.reducer';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
