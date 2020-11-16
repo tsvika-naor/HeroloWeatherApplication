@@ -1,25 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {ReactiveFormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { SearchComponent } from './search/search.component';
 import { WeatherComponent } from './weather/weather.component';
-import {HttpClientModule} from '@angular/common/http';
-import {WeatherService} from './weather/weather.service';
-import {FormsModule} from '@angular/forms';
-import {MatRadioModule} from '@angular/material/radio'
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { WeatherService } from './weather/weather.service';
+import { FormsModule } from '@angular/forms';
+import { MatRadioModule } from '@angular/material/radio'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WeatherItemComponent } from './weather/weather-item/weather-item.component';
-import {FlexLayoutModule} from '@angular/flex-layout';
-import {MatChipsModule, MatSelectModule, MatFormFieldModule, MatInputModule,
-   MatOptionModule, MatCardModule, MatToolbarModule, MatGridListModule,
-    MatDividerModule, MatIconModule} from '@angular/material';
-import {StoreModule} from '@ngrx/store';
-import {reducer} from './weather/store/weather.reducer';
-import {AngularFontAwesomeModule} from 'angular-font-awesome';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {
+  MatChipsModule, MatSelectModule, MatFormFieldModule, MatInputModule,
+  MatOptionModule, MatCardModule, MatToolbarModule, MatGridListModule,
+  MatDividerModule, MatIconModule
+} from '@angular/material';
+import { StoreModule } from '@ngrx/store';
+import { reducer } from './weather/store/weather.reducer';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 
 @NgModule({
@@ -32,7 +34,7 @@ import {AngularFontAwesomeModule} from 'angular-font-awesome';
     WeatherItemComponent,
   ],
   imports: [
-    StoreModule.forRoot( { weatherItem : reducer }),
+    StoreModule.forRoot({ weatherItem: reducer }),
     FlexLayoutModule,
     AngularFontAwesomeModule,
     BrowserModule,
